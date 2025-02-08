@@ -11,6 +11,24 @@ type
     pnlTopo: TPanel;
     btnFechar: TButton;
     pnlMenu: TPanel;
+    pnlRodape: TPanel;
+    pnlBackPrincipal: TPanel;
+    pnlConteudo: TPanel;
+    pnlLogo: TPanel;
+    pnlLineLogo: TPanel;
+    pnlConteudoLogo: TPanel;
+    lblTituloEmpresa: TLabel;
+    lblDescricaoEmpresa: TLabel;
+    pnlVersao: TPanel;
+    lblNumVersao: TLabel;
+    lblVersao: TLabel;
+    pnlUsuario: TPanel;
+    pnlLineUsuario: TPanel;
+    pnlImageUsuario: TPanel;
+    imgUsuario: TImage;
+    pnlDadosUsuarios: TPanel;
+    lblPerfil: TLabel;
+    lblUsuario: TLabel;
     procedure btnFecharClick(Sender: TObject);
   private
     { Private declarations }

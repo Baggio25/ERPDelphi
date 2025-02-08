@@ -29,6 +29,11 @@ type
     pnlDadosUsuarios: TPanel;
     lblPerfil: TLabel;
     lblUsuario: TLabel;
+    pnlLicenciado: TPanel;
+    Panel1: TPanel;
+    pnlLicenciadoConteudo: TPanel;
+    lblLicenciado: TLabel;
+    lblLicenciadoPara: TLabel;
     procedure btnFecharClick(Sender: TObject);
   private
     { Private declarations }

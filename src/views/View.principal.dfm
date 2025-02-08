@@ -2411,13 +2411,93 @@ object ViewPrincipal: TViewPrincipal
       Top = 432
       Width = 581
       Height = 41
+      Margins.Top = 10
       Align = alBottom
       BevelOuter = bvNone
       Color = 5395026
       ParentBackground = False
       TabOrder = 0
-      ExplicitTop = 445
-      ExplicitWidth = 185
+      object pnlLicenciado: TPanel
+        Left = 361
+        Top = 0
+        Width = 220
+        Height = 41
+        Align = alRight
+        BevelOuter = bvNone
+        TabOrder = 0
+        object Panel1: TPanel
+          AlignWithMargins = True
+          Left = 3
+          Top = 10
+          Width = 2
+          Height = 21
+          Margins.Top = 10
+          Margins.Bottom = 10
+          Align = alLeft
+          BevelOuter = bvNone
+          Color = 1031129
+          ParentBackground = False
+          TabOrder = 0
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitHeight = 41
+        end
+        object pnlLicenciadoConteudo: TPanel
+          Left = 16
+          Top = 0
+          Width = 204
+          Height = 41
+          Align = alRight
+          BevelOuter = bvNone
+          TabOrder = 1
+          ExplicitLeft = 96
+          object lblLicenciado: TLabel
+            AlignWithMargins = True
+            Left = 0
+            Top = 16
+            Width = 199
+            Height = 21
+            Margins.Left = 0
+            Margins.Top = 0
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Align = alTop
+            Alignment = taRightJustify
+            Caption = 'Empresa Teste LTDA'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -16
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            ExplicitLeft = 61
+            ExplicitTop = 23
+            ExplicitWidth = 138
+          end
+          object lblLicenciadoPara: TLabel
+            AlignWithMargins = True
+            Left = 0
+            Top = 3
+            Width = 199
+            Height = 13
+            Margins.Left = 0
+            Margins.Right = 5
+            Margins.Bottom = 0
+            Align = alTop
+            Alignment = taRightJustify
+            Caption = 'Licenciado para:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            ExplicitLeft = 201
+            ExplicitTop = 5
+            ExplicitWidth = 83
+          end
+        end
+      end
     end
     object pnlConteudo: TPanel
       Left = 0
