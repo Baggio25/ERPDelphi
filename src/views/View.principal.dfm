@@ -2128,17 +2128,26 @@ object ViewPrincipal: TViewPrincipal
     FFFFFFFFF4BFFD2FFFFFFFFFFFFFFFFFFFFFFFFFFA00005FFFFFFFFFFFFFFFFF
     FFFFFFFFFF0001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   TextHeight = 15
-  object Panel1: TPanel
+  object pnlTopo: TPanel
     Left = 0
     Top = 0
     Width = 837
     Height = 41
     Align = alTop
     BevelOuter = bvNone
-    Caption = 'Panel1'
     TabOrder = 0
-    ExplicitLeft = 520
-    ExplicitTop = 296
-    ExplicitWidth = 185
+    object btnFechar: TButton
+      Left = 762
+      Top = 0
+      Width = 75
+      Height = 41
+      Align = alRight
+      Caption = 'Fechar'
+      TabOrder = 0
+      OnClick = btnFecharClick
+      ExplicitLeft = 480
+      ExplicitTop = 9
+      ExplicitHeight = 25
+    end
   end
 end
