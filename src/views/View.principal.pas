@@ -36,8 +36,6 @@ type
     pnlSair: TPanel;
     btnSair: TPanel;
     lblBtnSair: TLabel;
-    pnlShapeMenu: TPanel;
-    shapeMenu: TShape;
     pnlDadosMenu: TPanel;
     btnClientes: TPanel;
     lblBtnClientes: TLabel;
@@ -49,14 +47,16 @@ type
     lblBtnProdutos: TLabel;
     btnConfiguracoes: TPanel;
     lblBtnConfiguracoes: TLabel;
-    procedure btnFecharClick(Sender: TObject);
     procedure btnSairClick(Sender: TObject);
     procedure btnClientesClick(Sender: TObject);
     procedure btnCaixaClick(Sender: TObject);
+    procedure btnFornecedoresClick(Sender: TObject);
+    procedure btnProdutosClick(Sender: TObject);
+    procedure btnConfiguracoesClick(Sender: TObject);
   private
-    { Private declarations }
+
   public
-    { Public declarations }
+
   end;
 
 var
@@ -76,14 +76,25 @@ begin
   //
 end;
 
-procedure TViewPrincipal.btnFecharClick(Sender: TObject);
+procedure TViewPrincipal.btnConfiguracoesClick(Sender: TObject);
 begin
-  Application.Terminate;
+  //
+end;
+
+procedure TViewPrincipal.btnFornecedoresClick(Sender: TObject);
+begin
+  //
+end;
+
+procedure TViewPrincipal.btnProdutosClick(Sender: TObject);
+begin
+ //
 end;
 
 procedure TViewPrincipal.btnSairClick(Sender: TObject);
 begin
   Application.Terminate;
 end;
+
 
 end.

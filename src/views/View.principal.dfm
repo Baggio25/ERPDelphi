@@ -2431,29 +2431,14 @@ object ViewPrincipal: TViewPrincipal
         end
       end
     end
-    object pnlShapeMenu: TPanel
+    object pnlDadosMenu: TPanel
       Left = 0
       Top = 0
-      Width = 4
-      Height = 432
-      Align = alLeft
-      BevelOuter = bvNone
-      TabOrder = 1
-      object shapeMenu: TShape
-        Left = 0
-        Top = 0
-        Width = 4
-        Height = 50
-      end
-    end
-    object pnlDadosMenu: TPanel
-      Left = 4
-      Top = 0
-      Width = 206
+      Width = 210
       Height = 432
       Align = alClient
       BevelOuter = bvNone
-      TabOrder = 2
+      TabOrder = 1
       ExplicitLeft = 16
       ExplicitTop = 216
       ExplicitWidth = 185
@@ -2462,7 +2447,7 @@ object ViewPrincipal: TViewPrincipal
         AlignWithMargins = True
         Left = 3
         Top = 20
-        Width = 200
+        Width = 204
         Height = 50
         Cursor = crHandPoint
         Margins.Top = 20
@@ -2477,7 +2462,7 @@ object ViewPrincipal: TViewPrincipal
           AlignWithMargins = True
           Left = 10
           Top = 14
-          Width = 190
+          Width = 194
           Height = 24
           Cursor = crHandPoint
           Margins.Left = 10
@@ -2502,7 +2487,7 @@ object ViewPrincipal: TViewPrincipal
       object btnCaixa: TPanel
         Left = 0
         Top = 73
-        Width = 206
+        Width = 210
         Height = 50
         Cursor = crHandPoint
         Align = alTop
@@ -2510,11 +2495,12 @@ object ViewPrincipal: TViewPrincipal
         TabOrder = 1
         OnClick = btnCaixaClick
         ExplicitTop = 8
+        ExplicitWidth = 206
         object lblBtnCaixa: TLabel
           AlignWithMargins = True
           Left = 10
           Top = 14
-          Width = 196
+          Width = 200
           Height = 24
           Cursor = crHandPoint
           Margins.Left = 10
@@ -2537,20 +2523,21 @@ object ViewPrincipal: TViewPrincipal
       object btnFornecedores: TPanel
         Left = 0
         Top = 123
-        Width = 206
+        Width = 210
         Height = 50
         Cursor = crHandPoint
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 2
-        OnClick = btnCaixaClick
+        OnClick = btnFornecedoresClick
         ExplicitLeft = -6
         ExplicitTop = 146
+        ExplicitWidth = 206
         object lblBtnFornecedores: TLabel
           AlignWithMargins = True
           Left = 10
           Top = 14
-          Width = 196
+          Width = 200
           Height = 24
           Cursor = crHandPoint
           Margins.Left = 10
@@ -2565,7 +2552,7 @@ object ViewPrincipal: TViewPrincipal
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
-          OnClick = btnCaixaClick
+          OnClick = btnFornecedoresClick
           ExplicitWidth = 118
           ExplicitHeight = 21
         end
@@ -2573,19 +2560,21 @@ object ViewPrincipal: TViewPrincipal
       object btnProdutos: TPanel
         Left = 0
         Top = 173
-        Width = 206
+        Width = 210
         Height = 50
         Cursor = crHandPoint
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 3
+        OnClick = btnProdutosClick
         ExplicitLeft = 6
         ExplicitTop = 158
+        ExplicitWidth = 206
         object lblBtnProdutos: TLabel
           AlignWithMargins = True
           Left = 10
           Top = 14
-          Width = 196
+          Width = 200
           Height = 24
           Cursor = crHandPoint
           Margins.Left = 10
@@ -2600,29 +2589,32 @@ object ViewPrincipal: TViewPrincipal
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
-          OnClick = btnCaixaClick
+          OnClick = btnProdutosClick
           ExplicitLeft = 7
           ExplicitTop = 30
+          ExplicitWidth = 196
         end
       end
       object btnConfiguracoes: TPanel
         AlignWithMargins = True
         Left = 3
         Top = 273
-        Width = 200
+        Width = 204
         Height = 50
         Cursor = crHandPoint
         Margins.Top = 50
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 4
+        OnClick = btnConfiguracoesClick
         ExplicitLeft = 0
         ExplicitTop = 340
+        ExplicitWidth = 200
         object lblBtnConfiguracoes: TLabel
           AlignWithMargins = True
           Left = 10
           Top = 14
-          Width = 190
+          Width = 194
           Height = 24
           Cursor = crHandPoint
           Margins.Left = 10
@@ -2637,9 +2629,10 @@ object ViewPrincipal: TViewPrincipal
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
-          OnClick = btnCaixaClick
+          OnClick = btnConfiguracoesClick
           ExplicitLeft = -3
           ExplicitTop = -18
+          ExplicitWidth = 190
         end
       end
     end
