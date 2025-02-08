@@ -45,10 +45,6 @@ type
     lblBtnCaixa: TLabel;
     btnFornecedores: TPanel;
     lblBtnFornecedores: TLabel;
-    btnProdutos: TPanel;
-    lblBtnProdutos: TLabel;
-    btnConfiguracoes: TPanel;
-    lblBtnConfiguracoes: TLabel;
     procedure btnFecharClick(Sender: TObject);
     procedure btnSairClick(Sender: TObject);
     procedure btnClientesClick(Sender: TObject);

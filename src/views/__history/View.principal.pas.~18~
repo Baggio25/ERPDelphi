@@ -9,7 +9,6 @@ uses
 type
   TViewPrincipal = class(TForm)
     pnlTopo: TPanel;
-    btnFechar: TButton;
     pnlMenu: TPanel;
     pnlRodape: TPanel;
     pnlBackPrincipal: TPanel;
@@ -27,9 +26,18 @@ type
     pnlImageUsuario: TPanel;
     imgUsuario: TImage;
     pnlDadosUsuarios: TPanel;
-    Label1: TLabel;
-    Label2: TLabel;
+    lblPerfil: TLabel;
+    lblUsuario: TLabel;
+    pnlLicenciado: TPanel;
+    Panel1: TPanel;
+    pnlLicenciadoConteudo: TPanel;
+    lblLicenciado: TLabel;
+    lblLicenciadoPara: TLabel;
+    pnlSair: TPanel;
+    btnSair: TPanel;
+    lblBtnSair: TLabel;
     procedure btnFecharClick(Sender: TObject);
+    procedure btnSairClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,6 +52,11 @@ implementation
 {$R *.dfm}
 
 procedure TViewPrincipal.btnFecharClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+procedure TViewPrincipal.btnSairClick(Sender: TObject);
 begin
   Application.Terminate;
 end;
