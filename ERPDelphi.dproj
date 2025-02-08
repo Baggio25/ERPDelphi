@@ -85,7 +85,7 @@
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <DCC_ExeOutput>C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\install\</DCC_ExeOutput>
-        <DCC_DcuOutput>C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\install\dcus\</DCC_DcuOutput>
+        <DCC_DcuOutput>C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\dcus\</DCC_DcuOutput>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Icon_MainIcon>install\img\icones.ico</Icon_MainIcon>

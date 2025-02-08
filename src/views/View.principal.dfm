@@ -4,8 +4,8 @@ object ViewPrincipal: TViewPrincipal
   Align = alClient
   BorderStyle = bsNone
   Caption = 'ViewPrincipal'
-  ClientHeight = 507
-  ClientWidth = 837
+  ClientHeight = 543
+  ClientWidth = 791
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -2131,16 +2131,18 @@ object ViewPrincipal: TViewPrincipal
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 837
-    Height = 41
+    Width = 791
+    Height = 57
     Align = alTop
     BevelOuter = bvNone
+    Color = 5395026
+    ParentBackground = False
     TabOrder = 0
     object btnFechar: TButton
-      Left = 762
+      Left = 716
       Top = 0
       Width = 75
-      Height = 41
+      Height = 57
       Align = alRight
       Caption = 'Fechar'
       TabOrder = 0
@@ -2148,6 +2150,70 @@ object ViewPrincipal: TViewPrincipal
       ExplicitLeft = 480
       ExplicitTop = 9
       ExplicitHeight = 25
+    end
+    object pnlLogo: TPanel
+      Left = 0
+      Top = 0
+      Width = 210
+      Height = 57
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = 4605510
+      ParentBackground = False
+      TabOrder = 1
+    end
+  end
+  object pnlMenu: TPanel
+    Left = 0
+    Top = 57
+    Width = 210
+    Height = 486
+    Align = alLeft
+    BevelOuter = bvNone
+    Color = 5395026
+    ParentBackground = False
+    TabOrder = 1
+  end
+  object pnlBackPrincipal: TPanel
+    Left = 210
+    Top = 57
+    Width = 581
+    Height = 486
+    Align = alClient
+    BevelOuter = bvNone
+    Color = 5395026
+    ParentBackground = False
+    TabOrder = 2
+    ExplicitLeft = 304
+    ExplicitTop = 248
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object pnlRodape: TPanel
+      Left = 0
+      Top = 445
+      Width = 581
+      Height = 41
+      Align = alBottom
+      BevelOuter = bvNone
+      Color = 5395026
+      ParentBackground = False
+      TabOrder = 0
+      ExplicitWidth = 185
+    end
+    object pnlConteudo: TPanel
+      Left = 0
+      Top = 0
+      Width = 581
+      Height = 445
+      Align = alClient
+      BevelOuter = bvNone
+      Color = clWhite
+      ParentBackground = False
+      TabOrder = 1
+      ExplicitLeft = 208
+      ExplicitTop = 224
+      ExplicitWidth = 185
+      ExplicitHeight = 41
     end
   end
 end
