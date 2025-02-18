@@ -2,16 +2,16 @@ object ViewBase: TViewBase
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu]
+  BorderStyle = bsNone
   Caption = 'ViewBase'
-  ClientHeight = 441
-  ClientWidth = 624
+  ClientHeight = 480
+  ClientWidth = 640
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  FormStyle = fsMDIChild
   Icon.Data = {
     0000010001008080000001002000280801001600000028000000800000000001
     0000010020000000000000000100C30E0000C30E000000000000000000000000
