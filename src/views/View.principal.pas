@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
   Vcl.Imaging.pngimage, Vcl.Imaging.jpeg, System.ImageList, Vcl.ImgList,
-  System.Actions, Vcl.ActnList, Vcl.Buttons;
+  System.Actions, Vcl.ActnList, Vcl.Buttons, Provider.constantes;
 
 type
   TViewPrincipal = class(TForm)
@@ -54,6 +54,7 @@ type
     procedure imgUsuarioBrancaMouseEnter(Sender: TObject);
     procedure imgUsuarioAmarelaMouseLeave(Sender: TObject);
     procedure btnProdutosClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
 
   public
@@ -95,6 +96,12 @@ end;
 procedure TViewPrincipal.btnSairClick(Sender: TObject);
 begin
   Application.Terminate;
+end;
+
+procedure TViewPrincipal.FormShow(Sender: TObject);
+begin
+  lblDescricaoEmpresa.Caption := IntToStr(iCOD_FILIAL) + ' - ' + sFANTASIA_FILIAL;
+  lblLicenciado.Caption       := sRAZAO_FILIAL;
 end;
 
 procedure TViewPrincipal.imgUsuarioAmarelaMouseLeave(Sender: TObject);

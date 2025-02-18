@@ -8,7 +8,8 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
   Data.DB, FireDAC.Comp.Client, FireDAC.Phys.FBDef, FireDAC.Phys.IBBase,
   FireDAC.Phys.FB, FireDAC.Comp.UI, System.IniFiles, FireDAC.Stan.Param,
-  FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
+  FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet,
+  Provider.constantes;
 
 type
   TServiceConexao = class(TDataModule)
@@ -16,6 +17,16 @@ type
     Cursor: TFDGUIxWaitCursor;
     FBDriverLink: TFDPhysFBDriverLink;
     FDQueryFiliais: TFDQuery;
+    FDQueryFiliaisFIL_CODIGO: TIntegerField;
+    FDQueryFiliaisFIL_RAZAO: TStringField;
+    FDQueryFiliaisFIL_FANTASIA: TStringField;
+    FDQueryFiliaisFIL_CNPJ: TStringField;
+    FDQueryFiliaisFIL_IE: TStringField;
+    FDQueryFiliaisFIL_TELEFONE: TStringField;
+    FDQueryFiliaisFIL_WHATSAPP: TStringField;
+    FDQueryFiliaisFIL_CELULAR: TStringField;
+    FDQueryFiliaisEND_CODIGO: TIntegerField;
+    FDQueryFiliaisFIL_END_COMPLEMENTO: TStringField;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -64,6 +75,10 @@ begin
    FDQueryFiliais.Close;
    FDQueryFiliais.Params[0].AsInteger := 1;
    FDQueryFiliais.Open;
+
+   iCOD_FILIAL      := FDQueryFiliaisFIL_CODIGO.AsInteger;
+   sRAZAO_FILIAL    := FDQueryFiliaisFIL_RAZAO.AsString;
+   sFANTASIA_FILIAL := FDQueryFiliaisFIL_FANTASIA.AsString;
 end;
 
 end.

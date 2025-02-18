@@ -2127,6 +2127,7 @@ object ViewPrincipal: TViewPrincipal
     FFFFFFFFE4000027FFFFFFFFFFFFFFFFFFFFFFFFEA000057FFFFFFFFFFFFFFFF
     FFFFFFFFF4BFFD2FFFFFFFFFFFFFFFFFFFFFFFFFFA00005FFFFFFFFFFFFFFFFF
     FFFFFFFFFF0001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+  OnShow = FormShow
   TextHeight = 15
   object pnlTopo: TPanel
     Left = 0
@@ -2150,7 +2151,6 @@ object ViewPrincipal: TViewPrincipal
       Color = 4605510
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 57
       object pnlLineLogo: TPanel
         Left = 0
         Top = 0
@@ -2161,9 +2161,6 @@ object ViewPrincipal: TViewPrincipal
         Color = 1031129
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 16
-        ExplicitTop = 8
-        ExplicitWidth = 185
       end
       object pnlConteudoLogo: TPanel
         Left = 0
@@ -2173,16 +2170,12 @@ object ViewPrincipal: TViewPrincipal
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitLeft = 16
-        ExplicitTop = 8
-        ExplicitWidth = 185
-        ExplicitHeight = 41
         object lblTituloEmpresa: TLabel
           AlignWithMargins = True
           Left = 10
           Top = 3
           Width = 197
-          Height = 31
+          Height = 39
           Margins.Left = 10
           Align = alClient
           Caption = 'ERPDelphi'
@@ -2192,14 +2185,15 @@ object ViewPrincipal: TViewPrincipal
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitHeight = 42
+          ExplicitWidth = 118
+          ExplicitHeight = 32
         end
         object lblDescricaoEmpresa: TLabel
           AlignWithMargins = True
           Left = 10
-          Top = 40
+          Top = 48
           Width = 197
-          Height = 25
+          Height = 17
           Margins.Left = 10
           Align = alBottom
           Caption = '1 - EMPRESA TESTE'
@@ -2209,6 +2203,8 @@ object ViewPrincipal: TViewPrincipal
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
+          ExplicitTop = 40
+          ExplicitWidth = 115
         end
       end
     end
@@ -2237,8 +2233,8 @@ object ViewPrincipal: TViewPrincipal
         Font.Name = 'Segoe UI Semilight'
         Font.Style = []
         ParentFont = False
-        ExplicitTop = 32
-        ExplicitHeight = 35
+        ExplicitWidth = 28
+        ExplicitHeight = 13
       end
       object lblVersao: TLabel
         AlignWithMargins = True
@@ -2258,7 +2254,6 @@ object ViewPrincipal: TViewPrincipal
         Font.Name = 'Segoe UI Semilight'
         Font.Style = []
         ParentFont = False
-        ExplicitTop = 10
         ExplicitWidth = 47
       end
     end
@@ -2270,7 +2265,6 @@ object ViewPrincipal: TViewPrincipal
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 2
-      ExplicitLeft = 606
       object pnlLineUsuario: TPanel
         AlignWithMargins = True
         Left = 3
@@ -2284,9 +2278,6 @@ object ViewPrincipal: TViewPrincipal
         Color = 1031129
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitHeight = 70
       end
       object pnlImageUsuario: TPanel
         Left = 150
@@ -2296,7 +2287,6 @@ object ViewPrincipal: TViewPrincipal
         Align = alRight
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitLeft = 35
         object imgUsuarioAmarela: TImage
           Left = 0
           Top = 0
@@ -2400,10 +2390,6 @@ object ViewPrincipal: TViewPrincipal
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitLeft = 16
-        ExplicitTop = 16
-        ExplicitWidth = 185
-        ExplicitHeight = 41
         object lblPerfil: TLabel
           AlignWithMargins = True
           Left = 0
@@ -2424,7 +2410,6 @@ object ViewPrincipal: TViewPrincipal
           Font.Style = []
           ParentFont = False
           ExplicitLeft = 64
-          ExplicitTop = 33
           ExplicitWidth = 73
         end
         object lblUsuario: TLabel
@@ -2462,8 +2447,6 @@ object ViewPrincipal: TViewPrincipal
     Color = 5395026
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 57
-    ExplicitHeight = 486
     object pnlSair: TPanel
       Left = 0
       Top = 432
@@ -2472,9 +2455,6 @@ object ViewPrincipal: TViewPrincipal
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitLeft = 16
-      ExplicitTop = 216
-      ExplicitWidth = 185
       object btnSair: TPanel
         Left = 0
         Top = 0
@@ -2486,9 +2466,6 @@ object ViewPrincipal: TViewPrincipal
         ParentBackground = False
         TabOrder = 0
         OnClick = btnSairClick
-        ExplicitLeft = 24
-        ExplicitTop = 8
-        ExplicitWidth = 185
         object lblBtnSair: TLabel
           AlignWithMargins = True
           Left = 3
@@ -2521,10 +2498,6 @@ object ViewPrincipal: TViewPrincipal
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitLeft = 16
-      ExplicitTop = 216
-      ExplicitWidth = 185
-      ExplicitHeight = 41
       object btnClientes: TSpeedButton
         AlignWithMargins = True
         Left = 3
@@ -3474,10 +3447,6 @@ object ViewPrincipal: TViewPrincipal
     Color = 5395026
     ParentBackground = False
     TabOrder = 2
-    ExplicitLeft = 304
-    ExplicitTop = 248
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object pnlRodape: TPanel
       Left = 0
       Top = 432
@@ -3510,9 +3479,6 @@ object ViewPrincipal: TViewPrincipal
           Color = 1031129
           ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitHeight = 41
         end
         object pnlLicenciadoConteudo: TPanel
           Left = 16
@@ -3522,7 +3488,6 @@ object ViewPrincipal: TViewPrincipal
           Align = alRight
           BevelOuter = bvNone
           TabOrder = 1
-          ExplicitLeft = 96
           object lblLicenciado: TLabel
             AlignWithMargins = True
             Left = 0
@@ -3543,7 +3508,6 @@ object ViewPrincipal: TViewPrincipal
             Font.Style = []
             ParentFont = False
             ExplicitLeft = 61
-            ExplicitTop = 23
             ExplicitWidth = 138
           end
           object lblLicenciadoPara: TLabel
@@ -3564,8 +3528,7 @@ object ViewPrincipal: TViewPrincipal
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
-            ExplicitLeft = 201
-            ExplicitTop = 5
+            ExplicitLeft = 116
             ExplicitWidth = 83
           end
         end
@@ -3582,10 +3545,6 @@ object ViewPrincipal: TViewPrincipal
       Color = clWhite
       ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 208
-      ExplicitTop = 224
-      ExplicitWidth = 185
-      ExplicitHeight = 41
       object imgBackground: TImage
         Left = 0
         Top = 0

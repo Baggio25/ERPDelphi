@@ -1,4 +1,0 @@
-object dmServiceConexao: TdmServiceConexao
-  Height = 179
-  Width = 282
-end
