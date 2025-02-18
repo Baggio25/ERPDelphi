@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.Imaging.jpeg;
+  Vcl.Imaging.pngimage, Vcl.Imaging.jpeg, System.ImageList, Vcl.ImgList,
+  System.Actions, Vcl.ActnList, Vcl.Buttons;
 
 type
   TViewPrincipal = class(TForm)
@@ -38,18 +39,13 @@ type
     btnSair: TPanel;
     lblBtnSair: TLabel;
     pnlDadosMenu: TPanel;
-    btnClientes: TPanel;
-    lblBtnClientes: TLabel;
-    btnCaixa: TPanel;
-    lblBtnCaixa: TLabel;
-    btnFornecedores: TPanel;
-    lblBtnFornecedores: TLabel;
-    btnProdutos: TPanel;
-    lblBtnProdutos: TLabel;
-    btnConfiguracoes: TPanel;
-    lblBtnConfiguracoes: TLabel;
     imgUsuarioAmarela: TImage;
     imgBackground: TImage;
+    btnClientes: TSpeedButton;
+    btnCaixa: TSpeedButton;
+    btnFornecedores: TSpeedButton;
+    btnConfiguracoes: TSpeedButton;
+    btnProdutos: TSpeedButton;
     procedure btnSairClick(Sender: TObject);
     procedure btnClientesClick(Sender: TObject);
     procedure btnCaixaClick(Sender: TObject);
@@ -57,6 +53,7 @@ type
     procedure btnConfiguracoesClick(Sender: TObject);
     procedure imgUsuarioBrancaMouseEnter(Sender: TObject);
     procedure imgUsuarioAmarelaMouseLeave(Sender: TObject);
+    procedure btnProdutosClick(Sender: TObject);
   private
 
   public
@@ -90,11 +87,15 @@ begin
   //
 end;
 
+procedure TViewPrincipal.btnProdutosClick(Sender: TObject);
+begin
+ //
+end;
+
 procedure TViewPrincipal.btnSairClick(Sender: TObject);
 begin
   Application.Terminate;
 end;
-
 
 procedure TViewPrincipal.imgUsuarioAmarelaMouseLeave(Sender: TObject);
 begin
