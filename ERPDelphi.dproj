@@ -107,6 +107,11 @@
             <Form>ViewPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="src\services\Service.conexao.pas">
+            <Form>ServiceConexao</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -136,7 +141,7 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
-                <DeployFile LocalName="Win32\Debug\ERPDelphi.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="install\ERPDelphi.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>ERPDelphi.exe</RemoteName>
                         <Overwrite>true</Overwrite>

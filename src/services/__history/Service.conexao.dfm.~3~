@@ -1,0 +1,9 @@
+object ServiceConexao: TServiceConexao
+  Height = 179
+  Width = 282
+  object FDConnection: TFDConnection
+    LoginPrompt = False
+    Left = 128
+    Top = 72
+  end
+end

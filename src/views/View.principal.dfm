@@ -2534,7 +2534,7 @@ object ViewPrincipal: TViewPrincipal
         Cursor = crHandPoint
         Margins.Top = 10
         Align = alTop
-        Caption = 'CLIENTES'
+        Caption = '   CLIENTES'
         Flat = True
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
@@ -2706,6 +2706,7 @@ object ViewPrincipal: TViewPrincipal
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000}
+        Margin = 5
         ParentFont = False
         OnClick = btnClientesClick
         ExplicitTop = 13
@@ -2720,7 +2721,7 @@ object ViewPrincipal: TViewPrincipal
         Cursor = crHandPoint
         Margins.Top = 10
         Align = alTop
-        Caption = 'CAIXA'
+        Caption = '   CAIXA'
         Flat = True
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
@@ -2892,6 +2893,7 @@ object ViewPrincipal: TViewPrincipal
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000}
+        Margin = 5
         ParentFont = False
         OnClick = btnCaixaClick
         ExplicitLeft = -6
@@ -2907,7 +2909,7 @@ object ViewPrincipal: TViewPrincipal
         Cursor = crHandPoint
         Margins.Top = 10
         Align = alTop
-        Caption = 'FORNECEDORES'
+        Caption = '   FORNECEDORES'
         Flat = True
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
@@ -3079,6 +3081,7 @@ object ViewPrincipal: TViewPrincipal
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000}
+        Margin = 5
         ParentFont = False
         OnClick = btnFornecedoresClick
         ExplicitLeft = 0
@@ -3094,7 +3097,7 @@ object ViewPrincipal: TViewPrincipal
         Cursor = crHandPoint
         Margins.Top = 10
         Align = alTop
-        Caption = 'CONFIGURA'#199#213'ES'
+        Caption = '   CONFIGURA'#199#213'ES'
         Flat = True
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
@@ -3266,6 +3269,7 @@ object ViewPrincipal: TViewPrincipal
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000}
+        Margin = 5
         ParentFont = False
         OnClick = btnConfiguracoesClick
         ExplicitTop = 61
@@ -3280,7 +3284,7 @@ object ViewPrincipal: TViewPrincipal
         Cursor = crHandPoint
         Margins.Top = 10
         Align = alTop
-        Caption = 'PRODUTOS'
+        Caption = '   PRODUTOS'
         Flat = True
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
@@ -3452,6 +3456,7 @@ object ViewPrincipal: TViewPrincipal
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000}
+        Margin = 5
         ParentFont = False
         OnClick = btnProdutosClick
         ExplicitTop = 61

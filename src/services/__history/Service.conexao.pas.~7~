@@ -1,0 +1,54 @@
+unit Service.conexao;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
+  Data.DB, FireDAC.Comp.Client, FireDAC.Phys.FBDef, FireDAC.Phys.IBBase,
+  FireDAC.Phys.FB, FireDAC.Comp.UI, System.IniFiles;
+
+type
+  TServiceConexao = class(TDataModule)
+    FDConnection: TFDConnection;
+    Cursor: TFDGUIxWaitCursor;
+    FBDriverLink: TFDPhysFBDriverLink;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ServiceConexao: TServiceConexao;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure TServiceConexao.DataModuleCreate(Sender: TObject);
+var LIniFile  : TIniFile;
+    LDatabase, LUserName, LPassword, LServidor, LCaminho : string;
+    LPorta    : Integer;
+begin
+
+   try
+      FDConnection.Connected := False;
+      LCaminho               := ExtractFileDir(ParamStr(0) + '\conexao.ini');
+      LIniFile               := TIniFile.Create(LCaminho);
+
+      LDatabase              := LIniFile.ReadString('CONEXAO', 'DATABASE', LDatabase);
+      LDatabase              := LIniFile.ReadString('CONEXAO', 'SERVIDOR', LServidor);
+      LDatabase              := LIniFile.ReadString('CONEXAO', 'PORTA', LDatabase);
+
+   finally
+
+   end;
+
+end;
+
+end.

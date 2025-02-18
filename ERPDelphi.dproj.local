@@ -1,2 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2025/02/17 22:04:20.234,=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2025/02/17 22:05:44.870,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\services\Service.conexao.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.dfm</Transaction>
+    <Transaction>2025/02/17 22:05:44.870,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\services\Service.conexao.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
