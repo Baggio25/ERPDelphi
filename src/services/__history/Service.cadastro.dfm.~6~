@@ -1,0 +1,18 @@
+object ServiceCadastro: TServiceCadastro
+  Height = 237
+  Width = 333
+  object FDQueryPessoas: TFDQuery
+    Connection = ServiceConexao.FDConnection
+    SQL.Strings = (
+      'SELECT * FROM PESSOAS WHERE PES_CODIGO = :CODIGO')
+    Left = 48
+    Top = 24
+    ParamData = <
+      item
+        Name = 'CODIGO'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end>
+  end
+end

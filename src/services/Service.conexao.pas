@@ -7,13 +7,15 @@ uses
   FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
   Data.DB, FireDAC.Comp.Client, FireDAC.Phys.FBDef, FireDAC.Phys.IBBase,
-  FireDAC.Phys.FB, FireDAC.Comp.UI, System.IniFiles;
+  FireDAC.Phys.FB, FireDAC.Comp.UI, System.IniFiles, FireDAC.Stan.Param,
+  FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TServiceConexao = class(TDataModule)
     FDConnection: TFDConnection;
     Cursor: TFDGUIxWaitCursor;
     FBDriverLink: TFDPhysFBDriverLink;
+    FDQueryFiliais: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -59,6 +61,9 @@ begin
       FreeAndNil(LIniFile);
    end;
 
+   FDQueryFiliais.Close;
+   FDQueryFiliais.Params[0].AsInteger := 1;
+   FDQueryFiliais.Open;
 end;
 
 end.

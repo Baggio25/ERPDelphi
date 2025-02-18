@@ -1,0 +1,4 @@
+object ServiceCadastro: TServiceCadastro
+  Height = 237
+  Width = 333
+end

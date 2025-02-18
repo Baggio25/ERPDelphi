@@ -1,7 +1,7 @@
 object ServiceConexao: TServiceConexao
   OnCreate = DataModuleCreate
-  Height = 179
-  Width = 282
+  Height = 249
+  Width = 310
   object FDConnection: TFDConnection
     Params.Strings = (
       
@@ -14,9 +14,10 @@ object ServiceConexao: TServiceConexao
       'Port=3050'
       'CharacterSet=win1252'
       'DriverID=FB')
+    Connected = True
     LoginPrompt = False
-    Left = 168
-    Top = 16
+    Left = 48
+    Top = 88
   end
   object Cursor: TFDGUIxWaitCursor
     Provider = 'Forms'
@@ -25,7 +26,21 @@ object ServiceConexao: TServiceConexao
   end
   object FBDriverLink: TFDPhysFBDriverLink
     VendorLib = 'C:\Program Files (x86)\Firebird\Firebird_2_5\bin\fbclient.dll'
-    Left = 168
-    Top = 96
+    Left = 48
+    Top = 160
+  end
+  object FDQueryFiliais: TFDQuery
+    Connection = FDConnection
+    SQL.Strings = (
+      'SELECT * FROM FILIAIS WHERE FIL_CODIGO = :CODIGO')
+    Left = 216
+    Top = 24
+    ParamData = <
+      item
+        Name = 'CODIGO'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end>
   end
 end

@@ -1,0 +1,9 @@
+object ServiceCadastro: TServiceCadastro
+  Height = 237
+  Width = 333
+  object FDQueryPessoas: TFDQuery
+    Connection = ServiceConexao.FDConnection
+    Left = 48
+    Top = 24
+  end
+end
