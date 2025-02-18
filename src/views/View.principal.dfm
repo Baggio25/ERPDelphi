@@ -12,6 +12,7 @@ object ViewPrincipal: TViewPrincipal
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  FormStyle = fsMDIForm
   Icon.Data = {
     0000010001008080000001002000280801001600000028000000800000000001
     0000010020000000000000000100C30E0000C30E000000000000000000000000
@@ -2203,7 +2204,6 @@ object ViewPrincipal: TViewPrincipal
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
-          ExplicitTop = 40
           ExplicitWidth = 115
         end
       end
