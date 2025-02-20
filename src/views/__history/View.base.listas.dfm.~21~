@@ -1,0 +1,141 @@
+inherited ViewBaseListas: TViewBaseListas
+  Cursor = crHandPoint
+  Caption = 'ViewBaseListas'
+  ClientHeight = 492
+  ClientWidth = 733
+  Color = clWhite
+  Font.Height = -16
+  Position = poMainFormCenter
+  OnMouseDown = FormMouseDown
+  ExplicitWidth = 733
+  ExplicitHeight = 492
+  TextHeight = 21
+  object pnlTopo: TPanel
+    Left = 0
+    Top = 0
+    Width = 733
+    Height = 35
+    Align = alTop
+    BevelOuter = bvNone
+    Color = 5395026
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitWidth = 640
+    object lblTitulo: TLabel
+      AlignWithMargins = True
+      Left = 10
+      Top = 3
+      Width = 664
+      Height = 29
+      Margins.Left = 10
+      Align = alClient
+      Caption = 'lblTitulo'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -19
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 3
+      ExplicitWidth = 70
+      ExplicitHeight = 25
+    end
+    object pnlFechar: TPanel
+      Left = 677
+      Top = 0
+      Width = 56
+      Height = 35
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+      OnClick = pnlFecharClick
+      ExplicitLeft = 584
+      object btnSair: TPanel
+        Left = 0
+        Top = 0
+        Width = 56
+        Height = 35
+        Cursor = crHandPoint
+        Align = alClient
+        BevelOuter = bvNone
+        Color = 4605510
+        ParentBackground = False
+        TabOrder = 0
+        ExplicitWidth = 210
+        ExplicitHeight = 41
+        object lblBtnSair: TLabel
+          AlignWithMargins = True
+          Left = 3
+          Top = 9
+          Width = 50
+          Height = 26
+          Cursor = crHandPoint
+          Margins.Top = 9
+          Margins.Bottom = 0
+          Align = alClient
+          Alignment = taCenter
+          Caption = 'SAIR'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 419583
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          ExplicitTop = 12
+          ExplicitWidth = 28
+          ExplicitHeight = 17
+        end
+      end
+    end
+  end
+  object pnlRodape: TPanel
+    Left = 0
+    Top = 452
+    Width = 733
+    Height = 40
+    Align = alBottom
+    BevelOuter = bvNone
+    Color = 7500402
+    ParentBackground = False
+    TabOrder = 1
+    object btnNovo: TSpeedButton
+      AlignWithMargins = True
+      Left = 629
+      Top = 3
+      Width = 101
+      Height = 34
+      Align = alRight
+      GroupIndex = 1
+      Caption = 'Novo'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 632
+      ExplicitTop = 0
+      ExplicitHeight = 35
+    end
+    object SpeedButton1: TSpeedButton
+      AlignWithMargins = True
+      Left = 522
+      Top = 3
+      Width = 101
+      Height = 34
+      Align = alRight
+      GroupIndex = 1
+      Down = True
+      Caption = 'Novo'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 602
+    end
+  end
+end

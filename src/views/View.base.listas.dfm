@@ -1,25 +1,31 @@
 inherited ViewBaseListas: TViewBaseListas
   Cursor = crHandPoint
   Caption = 'ViewBaseListas'
+  ClientHeight = 492
+  ClientWidth = 733
   Color = clWhite
+  Font.Height = -16
   Position = poMainFormCenter
   OnMouseDown = FormMouseDown
-  TextHeight = 15
+  ExplicitWidth = 733
+  ExplicitHeight = 492
+  TextHeight = 21
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 640
+    Width = 733
     Height = 35
     Align = alTop
     BevelOuter = bvNone
     Color = 5395026
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 640
     object lblTitulo: TLabel
       AlignWithMargins = True
       Left = 10
       Top = 3
-      Width = 571
+      Width = 664
       Height = 29
       Margins.Left = 10
       Align = alClient
@@ -35,7 +41,7 @@ inherited ViewBaseListas: TViewBaseListas
       ExplicitHeight = 25
     end
     object pnlFechar: TPanel
-      Left = 584
+      Left = 677
       Top = 0
       Width = 56
       Height = 35
@@ -43,6 +49,7 @@ inherited ViewBaseListas: TViewBaseListas
       BevelOuter = bvNone
       TabOrder = 0
       OnClick = pnlFecharClick
+      ExplicitLeft = 584
       object btnSair: TPanel
         Left = 0
         Top = 0
@@ -83,14 +90,145 @@ inherited ViewBaseListas: TViewBaseListas
   end
   object pnlRodape: TPanel
     Left = 0
-    Top = 445
-    Width = 640
-    Height = 35
+    Top = 452
+    Width = 733
+    Height = 40
     Align = alBottom
     BevelOuter = bvNone
     Color = 7500402
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 8
+    object btnNovo: TSpeedButton
+      AlignWithMargins = True
+      Left = 201
+      Top = 3
+      Width = 101
+      Height = 34
+      Align = alRight
+      GroupIndex = 1
+      Caption = 'Novo'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 157
+    end
+    object btnEditar: TSpeedButton
+      AlignWithMargins = True
+      Left = 308
+      Top = 3
+      Width = 101
+      Height = 34
+      Align = alRight
+      GroupIndex = 1
+      Caption = 'Editar'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 632
+      ExplicitTop = 0
+      ExplicitHeight = 35
+    end
+    object btnCancelar: TSpeedButton
+      AlignWithMargins = True
+      Left = 415
+      Top = 3
+      Width = 101
+      Height = 34
+      Align = alRight
+      GroupIndex = 1
+      Caption = 'Cancelar'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 632
+      ExplicitTop = 0
+      ExplicitHeight = 35
+    end
+    object btnSalvar: TSpeedButton
+      AlignWithMargins = True
+      Left = 522
+      Top = 3
+      Width = 101
+      Height = 34
+      Align = alRight
+      GroupIndex = 1
+      Caption = 'Salvar'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 632
+      ExplicitTop = 0
+      ExplicitHeight = 35
+    end
+    object btnExcluir: TSpeedButton
+      AlignWithMargins = True
+      Left = 629
+      Top = 3
+      Width = 101
+      Height = 34
+      Align = alRight
+      GroupIndex = 1
+      Caption = 'Excluir'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 632
+      ExplicitTop = 0
+      ExplicitHeight = 35
+    end
+  end
+  object pnlLinhaFundo: TPanel
+    Left = 0
+    Top = 35
+    Width = 733
+    Height = 417
+    Align = alClient
+    BevelOuter = bvNone
+    Color = 7500402
+    ParentBackground = False
+    TabOrder = 2
+    ExplicitLeft = 272
+    ExplicitTop = 224
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object cpLista: TCardPanel
+      AlignWithMargins = True
+      Left = 3
+      Top = 0
+      Width = 727
+      Height = 417
+      Margins.Top = 0
+      Margins.Bottom = 0
+      Align = alClient
+      BevelOuter = bvNone
+      Caption = 'cpLista'
+      Color = clWhite
+      ParentBackground = False
+      TabOrder = 0
+      ExplicitLeft = 216
+      ExplicitTop = 144
+      ExplicitWidth = 300
+      ExplicitHeight = 200
+    end
   end
 end
