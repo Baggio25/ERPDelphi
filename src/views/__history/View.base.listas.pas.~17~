@@ -5,8 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, View.base, Vcl.ExtCtrls,
-  Vcl.Imaging.pngimage, Vcl.StdCtrls, Vcl.Buttons, Vcl.WinXPanels, Vcl.WinXCtrls,
-  Data.DB, Vcl.Grids, Vcl.DBGrids;
+  Vcl.Imaging.pngimage, Vcl.StdCtrls, Vcl.Buttons, Vcl.WinXPanels;
 
 type
   TViewBaseListas = class(TViewBase)
@@ -22,18 +21,12 @@ type
     btnSalvar: TSpeedButton;
     btnExcluir: TSpeedButton;
     pnlLinhaFundo: TPanel;
-    cpnLista: TCardPanel;
-    crdPesquisa: TCard;
-    crdCadastro: TCard;
-    Panel1: TPanel;
-    lblTituloPequisa: TLabel;
-    edtPesquisa: TSearchBox;
-    dbgDados: TDBGrid;
-    dsDados: TDataSource;
+    cpLista: TCardPanel;
+    cpPesquisa: TCard;
+    cpCadastro: TCard;
     procedure pnlFecharClick(Sender: TObject);
     procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
-    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -55,12 +48,6 @@ begin
   inherited;
   ReleaseCapture;
   Perform(WM_SYSCOMMAND, DRAGMOVE, 0);
-end;
-
-procedure TViewBaseListas.FormShow(Sender: TObject);
-begin
-  inherited;
-  cpnLista.ActiveCard := crdPesquisa;
 end;
 
 procedure TViewBaseListas.pnlFecharClick(Sender: TObject);

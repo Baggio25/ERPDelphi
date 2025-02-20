@@ -267,7 +267,7 @@ inherited ViewBaseListas: TViewBaseListas
           object edtPesquisa: TSearchBox
             Left = 48
             Top = 52
-            Width = 313
+            Width = 623
             Height = 27
             BevelInner = bvNone
             BevelOuter = bvNone
@@ -286,18 +286,12 @@ inherited ViewBaseListas: TViewBaseListas
         end
         object dbgDados: TDBGrid
           AlignWithMargins = True
-          Left = 5
-          Top = 105
-          Width = 717
-          Height = 307
-          Margins.Left = 5
-          Margins.Top = 5
-          Margins.Right = 5
-          Margins.Bottom = 5
+          Left = 3
+          Top = 103
+          Width = 721
+          Height = 311
           Align = alClient
           BorderStyle = bsNone
-          DataSource = dsDados
-          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
           TabOrder = 1
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
@@ -318,9 +312,5 @@ inherited ViewBaseListas: TViewBaseListas
         ExplicitHeight = 41
       end
     end
-  end
-  object dsDados: TDataSource
-    Left = 560
-    Top = 200
   end
 end

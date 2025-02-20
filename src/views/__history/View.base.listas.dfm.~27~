@@ -7,6 +7,7 @@ inherited ViewBaseListas: TViewBaseListas
   Font.Height = -16
   Position = poMainFormCenter
   OnMouseDown = FormMouseDown
+  OnShow = FormShow
   ExplicitWidth = 733
   ExplicitHeight = 492
   TextHeight = 21
@@ -100,13 +101,31 @@ inherited ViewBaseListas: TViewBaseListas
     TabOrder = 1
     object btnNovo: TSpeedButton
       AlignWithMargins = True
-      Left = 629
+      Left = 201
       Top = 3
       Width = 101
       Height = 34
       Align = alRight
       GroupIndex = 1
       Caption = 'Novo'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 157
+    end
+    object btnEditar: TSpeedButton
+      AlignWithMargins = True
+      Left = 308
+      Top = 3
+      Width = 101
+      Height = 34
+      Align = alRight
+      GroupIndex = 1
+      Caption = 'Editar'
       Flat = True
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite
@@ -118,16 +137,15 @@ inherited ViewBaseListas: TViewBaseListas
       ExplicitTop = 0
       ExplicitHeight = 35
     end
-    object SpeedButton1: TSpeedButton
+    object btnCancelar: TSpeedButton
       AlignWithMargins = True
-      Left = 522
+      Left = 415
       Top = 3
       Width = 101
       Height = 34
       Align = alRight
       GroupIndex = 1
-      Down = True
-      Caption = 'Novo'
+      Caption = 'Cancelar'
       Flat = True
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite
@@ -135,7 +153,106 @@ inherited ViewBaseListas: TViewBaseListas
       Font.Name = 'Segoe UI Semibold'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 602
+      ExplicitLeft = 632
+      ExplicitTop = 0
+      ExplicitHeight = 35
+    end
+    object btnSalvar: TSpeedButton
+      AlignWithMargins = True
+      Left = 522
+      Top = 3
+      Width = 101
+      Height = 34
+      Align = alRight
+      GroupIndex = 1
+      Caption = 'Salvar'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 632
+      ExplicitTop = 0
+      ExplicitHeight = 35
+    end
+    object btnExcluir: TSpeedButton
+      AlignWithMargins = True
+      Left = 629
+      Top = 3
+      Width = 101
+      Height = 34
+      Align = alRight
+      GroupIndex = 1
+      Caption = 'Excluir'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 632
+      ExplicitTop = 0
+      ExplicitHeight = 35
+    end
+  end
+  object pnlLinhaFundo: TPanel
+    Left = 0
+    Top = 35
+    Width = 733
+    Height = 417
+    Align = alClient
+    BevelOuter = bvNone
+    Color = 7500402
+    ParentBackground = False
+    TabOrder = 2
+    ExplicitLeft = 272
+    ExplicitTop = 224
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object cpnLista: TCardPanel
+      AlignWithMargins = True
+      Left = 3
+      Top = 0
+      Width = 727
+      Height = 417
+      Margins.Top = 0
+      Margins.Bottom = 0
+      Align = alClient
+      ActiveCard = crdCadastro
+      BevelOuter = bvNone
+      Caption = 'cpnLista'
+      Color = clWhite
+      ParentBackground = False
+      TabOrder = 0
+      ExplicitLeft = 216
+      ExplicitTop = 144
+      ExplicitWidth = 300
+      ExplicitHeight = 200
+      object crdPesquisa: TCard
+        Left = 0
+        Top = 0
+        Width = 727
+        Height = 417
+        Caption = 'Pesquisa'
+        CardIndex = 0
+        TabOrder = 0
+        ExplicitWidth = 185
+        ExplicitHeight = 41
+      end
+      object crdCadastro: TCard
+        Left = 0
+        Top = 0
+        Width = 727
+        Height = 417
+        Caption = 'Cadastro'
+        CardIndex = 1
+        TabOrder = 1
+        ExplicitWidth = 185
+        ExplicitHeight = 41
+      end
     end
   end
 end

@@ -5,8 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, View.base, Vcl.ExtCtrls,
-  Vcl.Imaging.pngimage, Vcl.StdCtrls, Vcl.Buttons, Vcl.WinXPanels, Vcl.WinXCtrls,
-  Data.DB, Vcl.Grids, Vcl.DBGrids;
+  Vcl.Imaging.pngimage, Vcl.StdCtrls, Vcl.Buttons, Vcl.WinXPanels, Vcl.WinXCtrls;
 
 type
   TViewBaseListas = class(TViewBase)
@@ -28,8 +27,6 @@ type
     Panel1: TPanel;
     lblTituloPequisa: TLabel;
     edtPesquisa: TSearchBox;
-    dbgDados: TDBGrid;
-    dsDados: TDataSource;
     procedure pnlFecharClick(Sender: TObject);
     procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
