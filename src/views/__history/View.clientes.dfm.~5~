@@ -1,0 +1,46 @@
+inherited ViewClientes: TViewClientes
+  Caption = ''
+  TextHeight = 21
+  inherited pnlTopo: TPanel
+    inherited lblTitulo: TLabel
+      Caption = 'Clientes'
+      ExplicitWidth = 68
+    end
+  end
+  inherited pnlLinhaFundo: TPanel
+    inherited cpnLista: TCardPanel
+      inherited crdPesquisa: TCard
+        inherited dbgDados: TDBGrid
+          Font.Charset = ANSI_CHARSET
+          Font.Height = -13
+          Font.Name = 'Segoe UI Semilight'
+          ParentFont = False
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'PES_CODIGO'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_NOME_RAZAO'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_FANTASIA'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_CPF_CPNJ'
+              Visible = True
+            end>
+        end
+      end
+    end
+  end
+  inherited dsDados: TDataSource
+    DataSet = ServiceCadastro.FDQueryPessoas
+  end
+end

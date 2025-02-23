@@ -21,7 +21,6 @@ inherited ViewBaseListas: TViewBaseListas
     Color = 5395026
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 640
     object lblTitulo: TLabel
       AlignWithMargins = True
       Left = 10
@@ -37,7 +36,6 @@ inherited ViewBaseListas: TViewBaseListas
       Font.Name = 'Segoe UI Semibold'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 3
       ExplicitWidth = 70
       ExplicitHeight = 25
     end
@@ -50,7 +48,6 @@ inherited ViewBaseListas: TViewBaseListas
       BevelOuter = bvNone
       TabOrder = 0
       OnClick = pnlFecharClick
-      ExplicitLeft = 584
       object btnSair: TPanel
         Left = 0
         Top = 0
@@ -62,8 +59,7 @@ inherited ViewBaseListas: TViewBaseListas
         Color = 4605510
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 210
-        ExplicitHeight = 41
+        OnClick = pnlFecharClick
         object lblBtnSair: TLabel
           AlignWithMargins = True
           Left = 3
@@ -82,7 +78,7 @@ inherited ViewBaseListas: TViewBaseListas
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitTop = 12
+          OnClick = pnlFecharClick
           ExplicitWidth = 28
           ExplicitHeight = 17
         end
@@ -102,9 +98,11 @@ inherited ViewBaseListas: TViewBaseListas
     object btnNovo: TSpeedButton
       AlignWithMargins = True
       Left = 201
-      Top = 3
+      Top = 0
       Width = 101
-      Height = 34
+      Height = 37
+      Cursor = crHandPoint
+      Margins.Top = 0
       Align = alRight
       GroupIndex = 1
       Caption = 'Novo'
@@ -116,13 +114,17 @@ inherited ViewBaseListas: TViewBaseListas
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 157
+      ExplicitTop = 3
+      ExplicitHeight = 34
     end
     object btnEditar: TSpeedButton
       AlignWithMargins = True
       Left = 308
-      Top = 3
+      Top = 0
       Width = 101
-      Height = 34
+      Height = 37
+      Cursor = crHandPoint
+      Margins.Top = 0
       Align = alRight
       GroupIndex = 1
       Caption = 'Editar'
@@ -134,15 +136,16 @@ inherited ViewBaseListas: TViewBaseListas
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 632
-      ExplicitTop = 0
       ExplicitHeight = 35
     end
     object btnCancelar: TSpeedButton
       AlignWithMargins = True
       Left = 415
-      Top = 3
+      Top = 0
       Width = 101
-      Height = 34
+      Height = 37
+      Cursor = crHandPoint
+      Margins.Top = 0
       Align = alRight
       GroupIndex = 1
       Caption = 'Cancelar'
@@ -154,15 +157,16 @@ inherited ViewBaseListas: TViewBaseListas
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 632
-      ExplicitTop = 0
       ExplicitHeight = 35
     end
     object btnSalvar: TSpeedButton
       AlignWithMargins = True
       Left = 522
-      Top = 3
+      Top = 0
       Width = 101
-      Height = 34
+      Height = 37
+      Cursor = crHandPoint
+      Margins.Top = 0
       Align = alRight
       GroupIndex = 1
       Caption = 'Salvar'
@@ -174,15 +178,16 @@ inherited ViewBaseListas: TViewBaseListas
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 632
-      ExplicitTop = 0
       ExplicitHeight = 35
     end
     object btnExcluir: TSpeedButton
       AlignWithMargins = True
       Left = 629
-      Top = 3
+      Top = 0
       Width = 101
-      Height = 34
+      Height = 37
+      Cursor = crHandPoint
+      Margins.Top = 0
       Align = alRight
       GroupIndex = 1
       Caption = 'Excluir'
@@ -194,7 +199,6 @@ inherited ViewBaseListas: TViewBaseListas
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 632
-      ExplicitTop = 0
       ExplicitHeight = 35
     end
   end
@@ -208,10 +212,6 @@ inherited ViewBaseListas: TViewBaseListas
     Color = 7500402
     ParentBackground = False
     TabOrder = 2
-    ExplicitLeft = 272
-    ExplicitTop = 224
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object cpnLista: TCardPanel
       AlignWithMargins = True
       Left = 3
@@ -227,10 +227,6 @@ inherited ViewBaseListas: TViewBaseListas
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 216
-      ExplicitTop = 144
-      ExplicitWidth = 300
-      ExplicitHeight = 200
       object crdPesquisa: TCard
         Left = 0
         Top = 0
@@ -239,8 +235,6 @@ inherited ViewBaseListas: TViewBaseListas
         Caption = 'Pesquisa'
         CardIndex = 0
         TabOrder = 0
-        ExplicitWidth = 185
-        ExplicitHeight = 41
         object Panel1: TPanel
           Left = 0
           Top = 0
@@ -267,11 +261,11 @@ inherited ViewBaseListas: TViewBaseListas
           object edtPesquisa: TSearchBox
             Left = 48
             Top = 52
-            Width = 313
+            Width = 623
             Height = 27
+            Cursor = crHandPoint
             BevelInner = bvNone
             BevelOuter = bvNone
-            BorderStyle = bsNone
             Ctl3D = False
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
@@ -297,7 +291,13 @@ inherited ViewBaseListas: TViewBaseListas
           Align = alClient
           BorderStyle = bsNone
           DataSource = dsDados
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI Semilight'
+          Font.Style = []
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+          ParentFont = False
           TabOrder = 1
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
@@ -314,8 +314,6 @@ inherited ViewBaseListas: TViewBaseListas
         Caption = 'Cadastro'
         CardIndex = 1
         TabOrder = 1
-        ExplicitWidth = 185
-        ExplicitHeight = 41
       end
     end
   end
