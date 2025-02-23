@@ -16,20 +16,22 @@ type
     btnSair: TPanel;
     lblBtnSair: TLabel;
     lblTitulo: TLabel;
-    btnNovo: TSpeedButton;
-    btnEditar: TSpeedButton;
-    btnCancelar: TSpeedButton;
-    btnSalvar: TSpeedButton;
-    btnExcluir: TSpeedButton;
     pnlLinhaFundo: TPanel;
     cpnLista: TCardPanel;
     crdPesquisa: TCard;
     crdCadastro: TCard;
-    Panel1: TPanel;
+    pnlPesquisa: TPanel;
     lblTituloPequisa: TLabel;
     edtPesquisa: TSearchBox;
     dbgDados: TDBGrid;
+    pnlCadastro: TPanel;
+    lblTituloCadastro: TLabel;
     dsDados: TDataSource;
+    btnNovo: TPanel;
+    btnEditar: TPanel;
+    btnCancelar: TPanel;
+    btnSalvar: TPanel;
+    btnExcluir: TPanel;
     procedure pnlFecharClick(Sender: TObject);
     procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
@@ -46,6 +48,7 @@ var
 implementation
 
 {$R *.dfm}
+
 
 procedure TViewBaseListas.FormMouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);

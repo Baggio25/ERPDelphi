@@ -1,0 +1,236 @@
+inherited ViewClientes: TViewClientes
+  Caption = ''
+  Position = poScreenCenter
+  Visible = False
+  TextHeight = 21
+  inherited pnlTopo: TPanel
+    inherited lblTitulo: TLabel
+      Caption = 'Clientes'
+      ExplicitWidth = 68
+    end
+  end
+  inherited pnlRodape: TPanel
+    inherited btnNovo: TSpeedButton
+      OnClick = btnNovoClick
+    end
+    inherited btnEditar: TSpeedButton
+      OnClick = btnEditarClick
+    end
+    inherited btnCancelar: TSpeedButton
+      OnClick = btnCancelarClick
+    end
+  end
+  inherited pnlLinhaFundo: TPanel
+    inherited cpnLista: TCardPanel
+      inherited crdPesquisa: TCard
+        inherited dbgDados: TDBGrid
+          TitleFont.Charset = ANSI_CHARSET
+          TitleFont.Height = -13
+          TitleFont.Name = 'Segoe UI Semilight'
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'PES_CODIGO'
+              Title.Caption = 'C'#243'digo'
+              Width = 48
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_NOME_RAZAO'
+              Title.Caption = 'Nome / Raz'#227'o'
+              Width = 274
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_FANTASIA'
+              Title.Caption = 'Nome Fantasia'
+              Width = 281
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_CPF_CPNJ'
+              Title.Caption = 'CPF / CNPJ'
+              Width = 117
+              Visible = True
+            end>
+        end
+      end
+      inherited crdCadastro: TCard
+        ExplicitTop = -3
+        ExplicitWidth = 1018
+        ExplicitHeight = 475
+        object Label1: TLabel [0]
+          Left = 73
+          Top = 88
+          Width = 50
+          Height = 21
+          Caption = 'C'#243'digo'
+          FocusControl = fldPesCodigo
+        end
+        object Label2: TLabel [1]
+          Left = 72
+          Top = 144
+          Width = 144
+          Height = 21
+          Caption = 'Nome / Raz'#227'o Social'
+          FocusControl = fldPesNomeRazao
+        end
+        object Label3: TLabel [2]
+          Left = 428
+          Top = 144
+          Width = 103
+          Height = 21
+          Caption = 'Nome Fantasia'
+          FocusControl = fldPesFantasia
+        end
+        object Label4: TLabel [3]
+          Left = 784
+          Top = 144
+          Width = 127
+          Height = 21
+          Caption = 'RG / Insc. Estadual'
+          FocusControl = fldPesRgIe
+        end
+        object Label5: TLabel [4]
+          Left = 73
+          Top = 201
+          Width = 57
+          Height = 21
+          Caption = 'Telefone'
+          FocusControl = fldPesFone
+        end
+        object Label6: TLabel [5]
+          Left = 250
+          Top = 201
+          Width = 49
+          Height = 21
+          Caption = 'Celular'
+          FocusControl = fldPesCel
+        end
+        object Label7: TLabel [6]
+          Left = 428
+          Top = 201
+          Width = 72
+          Height = 21
+          Caption = 'WhatsApp'
+          FocusControl = fldPesWhats
+        end
+        object Label8: TLabel [7]
+          Left = 73
+          Top = 256
+          Width = 82
+          Height = 21
+          Caption = 'Observa'#231#227'o'
+          FocusControl = fldPesObs
+        end
+        inherited pnlCadastro: TPanel
+          TabOrder = 8
+          inherited lblTituloCadastro: TLabel
+            Width = 190
+            Caption = 'Cadastro de Clientes'
+            ExplicitWidth = 190
+          end
+        end
+        object fldPesCodigo: TDBEdit
+          Left = 73
+          Top = 110
+          Width = 97
+          Height = 27
+          Ctl3D = False
+          DataField = 'PES_CODIGO'
+          DataSource = dsDados
+          ParentCtl3D = False
+          ReadOnly = True
+          TabOrder = 0
+        end
+        object fldPesNomeRazao: TDBEdit
+          Left = 73
+          Top = 166
+          Width = 350
+          Height = 27
+          Ctl3D = False
+          DataField = 'PES_NOME_RAZAO'
+          DataSource = dsDados
+          ParentCtl3D = False
+          TabOrder = 1
+        end
+        object fldPesFantasia: TDBEdit
+          Left = 428
+          Top = 166
+          Width = 350
+          Height = 27
+          Ctl3D = False
+          DataField = 'PES_FANTASIA'
+          DataSource = dsDados
+          ParentCtl3D = False
+          TabOrder = 2
+        end
+        object fldPesRgIe: TDBEdit
+          Left = 784
+          Top = 166
+          Width = 150
+          Height = 27
+          Ctl3D = False
+          DataField = 'PES_RG_IE'
+          DataSource = dsDados
+          ParentCtl3D = False
+          TabOrder = 3
+        end
+        object fldPesFone: TDBEdit
+          Left = 73
+          Top = 222
+          Width = 172
+          Height = 27
+          Ctl3D = False
+          DataField = 'PES_TELEFONE'
+          DataSource = dsDados
+          ParentCtl3D = False
+          TabOrder = 4
+        end
+        object fldPesCel: TDBEdit
+          Left = 250
+          Top = 222
+          Width = 172
+          Height = 27
+          Ctl3D = False
+          DataField = 'PES_CELULAR'
+          DataSource = dsDados
+          ParentCtl3D = False
+          TabOrder = 5
+        end
+        object fldPesWhats: TDBEdit
+          Left = 428
+          Top = 222
+          Width = 172
+          Height = 27
+          BiDiMode = bdLeftToRight
+          Ctl3D = False
+          DataField = 'PES_WHATSAPP'
+          DataSource = dsDados
+          ParentBiDiMode = False
+          ParentCtl3D = False
+          TabOrder = 6
+        end
+        object fldPesObs: TDBEdit
+          Left = 73
+          Top = 278
+          Width = 861
+          Height = 27
+          Ctl3D = False
+          DataField = 'PES_OBSERVACAO'
+          DataSource = dsDados
+          ParentCtl3D = False
+          TabOrder = 7
+        end
+      end
+    end
+  end
+  inherited dsDados: TDataSource
+    DataSet = ServiceCadastro.FDQueryPessoas
+    Left = 888
+    Top = 48
+  end
+end
