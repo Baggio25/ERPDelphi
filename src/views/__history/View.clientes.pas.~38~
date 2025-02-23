@@ -26,6 +26,8 @@ type
     fldPesWhats: TDBEdit;
     Label8: TLabel;
     fldPesObs: TDBEdit;
+    Label9: TLabel;
+    fldPesCpfCnpj: TDBEdit;
     procedure FormShow(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
@@ -39,6 +41,7 @@ type
     procedure GetPessoas( iTipo : Integer );
     procedure SetaAbaCadastros;
     procedure SetaAbaPesquisa;
+    procedure SetaFocoNome;
   end;
 
 var
@@ -60,6 +63,8 @@ procedure TViewClientes.btnEditarClick(Sender: TObject);
 begin
   inherited;
   SetaAbaCadastros;
+  SetaFocoNome;
+  ServiceCadastro.FDQueryPessoas.Edit;
 end;
 
 procedure TViewClientes.btnExcluirClick(Sender: TObject);
@@ -72,14 +77,17 @@ procedure TViewClientes.btnNovoClick(Sender: TObject);
 begin
   inherited;
   SetaAbaCadastros;
+  SetaFocoNome;
+  ServiceCadastro.FDQueryPessoas.Insert;
 end;
 
 procedure TViewClientes.btnSalvarClick(Sender: TObject);
 begin
   inherited;
-  ServiceCadastro.FDQueryPessoas.Edit;
-  ServiceCadastro.FDQueryPessoas.Post;
-  SetaAbaPesquisa;
+  if ServiceCadastro.FDQueryPessoas.State in dsEditModes then begin
+    ServiceCadastro.FDQueryPessoas.Post;
+    SetaAbaPesquisa;
+  end;
 end;
 
 procedure TViewClientes.FormShow(Sender: TObject);
@@ -105,6 +113,11 @@ end;
 procedure TViewClientes.SetaAbaPesquisa;
 begin
   cpnLista.ActiveCard := crdPesquisa;
+end;
+
+procedure TViewClientes.SetaFocoNome;
+begin
+  fldPesNomeRazao.SetFocus;
 end;
 
 end.

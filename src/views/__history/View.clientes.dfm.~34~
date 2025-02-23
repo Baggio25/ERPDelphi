@@ -9,10 +9,29 @@ inherited ViewClientes: TViewClientes
       ExplicitWidth = 68
     end
   end
+  inherited pnlRodape: TPanel
+    inherited btnNovo: TPanel
+      OnClick = btnNovoClick
+    end
+    inherited btnEditar: TPanel
+      OnClick = btnEditarClick
+    end
+    inherited btnCancelar: TPanel
+      OnClick = btnCancelarClick
+    end
+    inherited btnSalvar: TPanel
+      OnClick = btnSalvarClick
+    end
+    inherited btnExcluir: TPanel
+      OnClick = btnExcluirClick
+    end
+  end
   inherited pnlLinhaFundo: TPanel
     inherited cpnLista: TCardPanel
+      ActiveCard = crdPesquisa
       inherited crdPesquisa: TCard
         inherited dbgDados: TDBGrid
+          DataSource = dsDados
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI Semilight'
@@ -48,9 +67,6 @@ inherited ViewClientes: TViewClientes
         end
       end
       inherited crdCadastro: TCard
-        ExplicitTop = -3
-        ExplicitWidth = 1018
-        ExplicitHeight = 475
         object Label1: TLabel [0]
           Left = 73
           Top = 88

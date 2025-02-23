@@ -9,10 +9,28 @@ inherited ViewClientes: TViewClientes
       ExplicitWidth = 68
     end
   end
+  inherited pnlRodape: TPanel
+    inherited btnNovo: TPanel
+      OnClick = btnNovoClick
+    end
+    inherited btnEditar: TPanel
+      OnClick = btnEditarClick
+    end
+    inherited btnCancelar: TPanel
+      OnClick = btnCancelarClick
+    end
+    inherited btnSalvar: TPanel
+      OnClick = btnSalvarClick
+    end
+    inherited btnExcluir: TPanel
+      OnClick = btnExcluirClick
+    end
+  end
   inherited pnlLinhaFundo: TPanel
     inherited cpnLista: TCardPanel
       inherited crdPesquisa: TCard
         inherited dbgDados: TDBGrid
+          DataSource = dsDados
           TitleFont.Charset = ANSI_CHARSET
           TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI Semilight'
@@ -35,7 +53,7 @@ inherited ViewClientes: TViewClientes
               Expanded = False
               FieldName = 'PES_FANTASIA'
               Title.Caption = 'Nome Fantasia'
-              Width = 281
+              Width = 262
               Visible = True
             end
             item
@@ -44,13 +62,36 @@ inherited ViewClientes: TViewClientes
               Title.Caption = 'CPF / CNPJ'
               Width = 117
               Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_RG_IE'
+              Title.Caption = 'RG / Insc. Estadual'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_CELULAR'
+              Title.Caption = 'Celular'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_TELEFONE'
+              Title.Caption = 'Telefone'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PES_WHATSAPP'
+              Title.Caption = 'WhatsApp'
+              Visible = True
             end>
         end
       end
       inherited crdCadastro: TCard
-        ExplicitTop = -3
-        ExplicitWidth = 1018
-        ExplicitHeight = 475
+        ExplicitLeft = -3
+        ExplicitTop = -6
         object Label1: TLabel [0]
           Left = 73
           Top = 88
@@ -60,60 +101,68 @@ inherited ViewClientes: TViewClientes
           FocusControl = fldPesCodigo
         end
         object Label2: TLabel [1]
-          Left = 72
-          Top = 144
+          Left = 73
+          Top = 143
           Width = 144
           Height = 21
           Caption = 'Nome / Raz'#227'o Social'
-          FocusControl = DBEdit1
+          FocusControl = fldPesNomeRazao
         end
         object Label3: TLabel [2]
-          Left = 428
-          Top = 144
+          Left = 74
+          Top = 198
           Width = 103
           Height = 21
           Caption = 'Nome Fantasia'
-          FocusControl = DBEdit2
+          FocusControl = fldPesFantasia
         end
         object Label4: TLabel [3]
-          Left = 784
-          Top = 144
+          Left = 360
+          Top = 253
           Width = 127
           Height = 21
           Caption = 'RG / Insc. Estadual'
-          FocusControl = DBEdit3
+          FocusControl = fldPesRgIe
         end
         object Label5: TLabel [4]
-          Left = 73
-          Top = 201
+          Left = 74
+          Top = 307
           Width = 57
           Height = 21
           Caption = 'Telefone'
-          FocusControl = DBEdit4
+          FocusControl = fldPesFone
         end
         object Label6: TLabel [5]
-          Left = 250
-          Top = 201
+          Left = 252
+          Top = 307
           Width = 49
           Height = 21
           Caption = 'Celular'
-          FocusControl = DBEdit5
+          FocusControl = fldPesCel
         end
         object Label7: TLabel [6]
-          Left = 428
-          Top = 201
+          Left = 430
+          Top = 307
           Width = 72
           Height = 21
           Caption = 'WhatsApp'
-          FocusControl = DBEdit6
+          FocusControl = fldPesWhats
         end
         object Label8: TLabel [7]
-          Left = 73
-          Top = 256
+          Left = 74
+          Top = 360
           Width = 82
           Height = 21
           Caption = 'Observa'#231#227'o'
-          FocusControl = DBEdit7
+          FocusControl = fldPesObs
+        end
+        object Label9: TLabel [8]
+          Left = 74
+          Top = 253
+          Width = 77
+          Height = 21
+          Caption = 'CPF / CNPJ'
+          FocusControl = fldPesCpfCnpj
         end
         inherited pnlCadastro: TPanel
           TabOrder = 8
@@ -135,10 +184,10 @@ inherited ViewClientes: TViewClientes
           ReadOnly = True
           TabOrder = 0
         end
-        object DBEdit1: TDBEdit
-          Left = 73
-          Top = 166
-          Width = 350
+        object fldPesNomeRazao: TDBEdit
+          Left = 74
+          Top = 165
+          Width = 860
           Height = 27
           Ctl3D = False
           DataField = 'PES_NOME_RAZAO'
@@ -146,10 +195,10 @@ inherited ViewClientes: TViewClientes
           ParentCtl3D = False
           TabOrder = 1
         end
-        object DBEdit2: TDBEdit
-          Left = 428
-          Top = 166
-          Width = 350
+        object fldPesFantasia: TDBEdit
+          Left = 74
+          Top = 220
+          Width = 860
           Height = 27
           Ctl3D = False
           DataField = 'PES_FANTASIA'
@@ -157,10 +206,10 @@ inherited ViewClientes: TViewClientes
           ParentCtl3D = False
           TabOrder = 2
         end
-        object DBEdit3: TDBEdit
-          Left = 784
-          Top = 166
-          Width = 150
+        object fldPesRgIe: TDBEdit
+          Left = 360
+          Top = 274
+          Width = 221
           Height = 27
           Ctl3D = False
           DataField = 'PES_RG_IE'
@@ -168,9 +217,9 @@ inherited ViewClientes: TViewClientes
           ParentCtl3D = False
           TabOrder = 3
         end
-        object DBEdit4: TDBEdit
-          Left = 73
-          Top = 222
+        object fldPesFone: TDBEdit
+          Left = 74
+          Top = 328
           Width = 172
           Height = 27
           Ctl3D = False
@@ -179,9 +228,9 @@ inherited ViewClientes: TViewClientes
           ParentCtl3D = False
           TabOrder = 4
         end
-        object DBEdit5: TDBEdit
-          Left = 250
-          Top = 222
+        object fldPesCel: TDBEdit
+          Left = 252
+          Top = 328
           Width = 172
           Height = 27
           Ctl3D = False
@@ -190,10 +239,10 @@ inherited ViewClientes: TViewClientes
           ParentCtl3D = False
           TabOrder = 5
         end
-        object DBEdit6: TDBEdit
-          Left = 428
-          Top = 222
-          Width = 172
+        object fldPesWhats: TDBEdit
+          Left = 430
+          Top = 328
+          Width = 151
           Height = 27
           BiDiMode = bdLeftToRight
           Ctl3D = False
@@ -203,9 +252,9 @@ inherited ViewClientes: TViewClientes
           ParentCtl3D = False
           TabOrder = 6
         end
-        object DBEdit7: TDBEdit
-          Left = 73
-          Top = 278
+        object fldPesObs: TDBEdit
+          Left = 74
+          Top = 382
           Width = 861
           Height = 27
           Ctl3D = False
@@ -213,6 +262,19 @@ inherited ViewClientes: TViewClientes
           DataSource = dsDados
           ParentCtl3D = False
           TabOrder = 7
+        end
+        object fldPesCpfCnpj: TDBEdit
+          Left = 74
+          Top = 274
+          Width = 280
+          Height = 27
+          BiDiMode = bdLeftToRight
+          Ctl3D = False
+          DataField = 'PES_CPF_CPNJ'
+          DataSource = dsDados
+          ParentBiDiMode = False
+          ParentCtl3D = False
+          TabOrder = 9
         end
       end
     end

@@ -26,15 +26,22 @@ type
     fldPesWhats: TDBEdit;
     Label8: TLabel;
     fldPesObs: TDBEdit;
+    Label9: TLabel;
+    fldPesCpfCnpj: TDBEdit;
     procedure FormShow(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
     procedure GetPessoas( iTipo : Integer );
     procedure SetaAbaCadastros;
+    procedure SetaAbaPesquisa;
+    procedure SetaFocoNome;
   end;
 
 var
@@ -46,16 +53,55 @@ implementation
 
 { TViewClientes }
 
+procedure TViewClientes.btnCancelarClick(Sender: TObject);
+begin
+  inherited;
+  if ServiceCadastro.FDQueryPessoas.State in dsEditModes then begin
+    ServiceCadastro.FDQueryPessoas.Cancel;
+  end;
+  SetaAbaPesquisa;
+end;
+
 procedure TViewClientes.btnEditarClick(Sender: TObject);
 begin
   inherited;
   SetaAbaCadastros;
+  SetaFocoNome;
+  ServiceCadastro.FDQueryPessoas.Edit;
+end;
+
+procedure TViewClientes.btnExcluirClick(Sender: TObject);
+begin
+  inherited;
+
+  if ServiceCadastro.FDQueryPessoas.RecordCount > 0 then begin
+
+    if Application.MessageBox('Confirma Exclusão ?','Atenção !!!', MB_YESNO + MB_ICONQUESTION + MB_DEFBUTTON2) = IDYES Then begin
+      ServiceCadastro.FDQueryPessoas.Delete;
+      ShowMessage('Cliente excluído com sucesso.');
+    end;
+
+  end;
+
 end;
 
 procedure TViewClientes.btnNovoClick(Sender: TObject);
 begin
   inherited;
   SetaAbaCadastros;
+  SetaFocoNome;
+  ServiceCadastro.FDQueryPessoas.Insert;
+end;
+
+procedure TViewClientes.btnSalvarClick(Sender: TObject);
+begin
+  inherited;
+  if ServiceCadastro.FDQueryPessoas.State in dsEditModes then begin
+    ServiceCadastro.FDQueryPessoasPES_TIPO.AsInteger := 1;
+    ServiceCadastro.FDQueryPessoas.Post;
+    ShowMessage('Cliente salvo com sucesso.');
+    SetaAbaPesquisa;
+  end;
 end;
 
 procedure TViewClientes.FormShow(Sender: TObject);
@@ -65,10 +111,14 @@ begin
 end;
 
 procedure TViewClientes.GetPessoas(iTipo: Integer);
+var sSQL : String;
 begin
+  sSQL := 'SELECT * FROM PESSOAS WHERE PES_TIPO = :tipoPessoa ';
+  sSQL := sSQL + 'ORDER BY PES_CODIGO DESC';
+
   ServiceCadastro.FDQueryPessoas.Close;
   ServiceCadastro.FDQueryPessoas.SQL.Clear;
-  ServiceCadastro.FDQueryPessoas.SQL.Add('SELECT * FROM PESSOAS WHERE PES_TIPO = :tipoPessoa');
+  ServiceCadastro.FDQueryPessoas.SQL.Add(sSQL);
   ServiceCadastro.FDQueryPessoas.Params[0].AsInteger := iTipo;
   ServiceCadastro.FDQueryPessoas.Open();
 end;
@@ -76,6 +126,16 @@ end;
 procedure TViewClientes.SetaAbaCadastros;
 begin
   cpnLista.ActiveCard := crdCadastro;
+end;
+
+procedure TViewClientes.SetaAbaPesquisa;
+begin
+  cpnLista.ActiveCard := crdPesquisa;
+end;
+
+procedure TViewClientes.SetaFocoNome;
+begin
+  fldPesNomeRazao.SetFocus;
 end;
 
 end.

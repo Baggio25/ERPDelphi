@@ -4,7 +4,7 @@ object ServiceCadastro: TServiceCadastro
   object FDQueryPessoas: TFDQuery
     Connection = ServiceConexao.FDConnection
     SQL.Strings = (
-      'SELECT * FROM PESSOAS WHERE PES_CODIGO = :CODIGO ')
+      'SELECT * FROM PESSOAS WHERE PES_CODIGO = :CODIGO')
     Left = 48
     Top = 24
     ParamData = <

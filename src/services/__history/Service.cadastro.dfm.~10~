@@ -4,7 +4,7 @@ object ServiceCadastro: TServiceCadastro
   object FDQueryPessoas: TFDQuery
     Connection = ServiceConexao.FDConnection
     SQL.Strings = (
-      'SELECT * FROM PESSOAS WHERE PES_CODIGO = :CODIGO ')
+      'SELECT * FROM PESSOAS WHERE PES_CODIGO = :CODIGO')
     Left = 48
     Top = 24
     ParamData = <
@@ -15,7 +15,6 @@ object ServiceCadastro: TServiceCadastro
         Value = Null
       end>
     object FDQueryPessoasPES_CODIGO: TIntegerField
-      AutoGenerateValue = arAutoInc
       FieldName = 'PES_CODIGO'
       Origin = 'PES_CODIGO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
