@@ -48,6 +48,7 @@ inherited ViewClientes: TViewClientes
     ExplicitWidth = 1024
     inherited cpnLista: TCardPanel
       Width = 1018
+      ActiveCard = crdCadastro
       ExplicitWidth = 1018
       inherited crdPesquisa: TCard
         Width = 1018
@@ -217,6 +218,7 @@ inherited ViewClientes: TViewClientes
           Top = 165
           Width = 650
           Height = 27
+          CharCase = ecUpperCase
           Ctl3D = False
           DataField = 'PES_NOME_RAZAO'
           DataSource = dsDados
@@ -228,6 +230,7 @@ inherited ViewClientes: TViewClientes
           Top = 220
           Width = 650
           Height = 27
+          CharCase = ecUpperCase
           Ctl3D = False
           DataField = 'PES_FANTASIA'
           DataSource = dsDados
@@ -239,6 +242,7 @@ inherited ViewClientes: TViewClientes
           Top = 274
           Width = 221
           Height = 27
+          CharCase = ecUpperCase
           Ctl3D = False
           DataField = 'PES_RG_IE'
           DataSource = dsDados
@@ -285,6 +289,7 @@ inherited ViewClientes: TViewClientes
           Top = 382
           Width = 650
           Height = 27
+          CharCase = ecUpperCase
           Ctl3D = False
           DataField = 'PES_OBSERVACAO'
           DataSource = dsDados
