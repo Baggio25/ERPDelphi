@@ -36,10 +36,16 @@ type
     procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure FormShow(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+    procedure btnNovoClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
   private
     { Private declarations }
+    procedure SetaAbaCadastros;
+    procedure SetaAbaPesquisa;
   public
-    { Public declarations }
+
   end;
 
 var
@@ -49,6 +55,30 @@ implementation
 
 {$R *.dfm}
 
+
+procedure TViewBaseListas.btnCancelarClick(Sender: TObject);
+begin
+  inherited;
+  SetaAbaPesquisa;
+end;
+
+procedure TViewBaseListas.btnEditarClick(Sender: TObject);
+begin
+  inherited;
+  SetaAbaCadastros;
+end;
+
+procedure TViewBaseListas.btnNovoClick(Sender: TObject);
+begin
+  inherited;
+  SetaAbaCadastros;
+end;
+
+procedure TViewBaseListas.btnSalvarClick(Sender: TObject);
+begin
+  inherited;
+  SetaAbaPesquisa;
+end;
 
 procedure TViewBaseListas.FormMouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
@@ -70,6 +100,16 @@ procedure TViewBaseListas.pnlFecharClick(Sender: TObject);
 begin
   inherited;
   Self.Close;
+end;
+
+procedure TViewBaseListas.SetaAbaCadastros;
+begin
+  cpnLista.ActiveCard := crdCadastro;
+end;
+
+procedure TViewBaseListas.SetaAbaPesquisa;
+begin
+  cpnLista.ActiveCard := crdPesquisa;
 end;
 
 end.

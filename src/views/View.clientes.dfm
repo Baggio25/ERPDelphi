@@ -1,55 +1,74 @@
 inherited ViewClientes: TViewClientes
   Caption = ''
+  ClientWidth = 1024
   Position = poScreenCenter
   Visible = False
+  ExplicitWidth = 1024
   TextHeight = 21
   inherited pnlTopo: TPanel
+    Width = 1024
+    ExplicitWidth = 1024
     inherited lblTitulo: TLabel
       Width = 955
-      Height = 29
       Caption = 'Clientes'
-      ExplicitWidth = 955
+      ExplicitWidth = 68
     end
     inherited pnlFechar: TPanel
-      inherited btnSair: TPanel
-        inherited lblBtnSair: TLabel
-          Width = 50
-          Height = 26
-        end
-      end
+      Left = 968
+      ExplicitLeft = 968
     end
   end
   inherited pnlRodape: TPanel
+    Width = 1024
+    ExplicitWidth = 1024
     inherited btnNovo: TPanel
-      OnClick = btnNovoClick
+      Left = 524
+      ExplicitLeft = 524
     end
     inherited btnEditar: TPanel
-      OnClick = btnEditarClick
+      Left = 624
+      ExplicitLeft = 624
     end
     inherited btnCancelar: TPanel
-      OnClick = btnCancelarClick
+      Left = 724
+      ExplicitLeft = 724
     end
     inherited btnSalvar: TPanel
-      OnClick = btnSalvarClick
+      Left = 824
+      ExplicitLeft = 824
     end
     inherited btnExcluir: TPanel
+      Left = 924
       OnClick = btnExcluirClick
+      ExplicitLeft = 924
     end
   end
   inherited pnlLinhaFundo: TPanel
+    Width = 1024
+    ExplicitWidth = 1024
     inherited cpnLista: TCardPanel
+      Width = 1018
+      ExplicitWidth = 1018
       inherited crdPesquisa: TCard
+        Width = 1018
+        ExplicitWidth = 1018
+        inherited pnlPesquisa: TPanel
+          Width = 1018
+          ExplicitWidth = 1018
+        end
         inherited dbgDados: TDBGrid
+          Width = 1008
           DataSource = dsDados
+          Font.Name = 'Segoe UI'
           TitleFont.Charset = ANSI_CHARSET
-          TitleFont.Height = -13
-          TitleFont.Name = 'Segoe UI Semilight'
+          TitleFont.Name = 'Segoe UI '
           Columns = <
             item
               Expanded = False
               FieldName = 'PES_CODIGO'
+              Title.Alignment = taRightJustify
               Title.Caption = 'C'#243'digo'
-              Width = 48
+              Width = 66
               Visible = True
             end
             item
@@ -83,26 +102,21 @@ inherited ViewClientes: TViewClientes
               Expanded = False
               FieldName = 'PES_CELULAR'
               Title.Caption = 'Celular'
-              Width = 64
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'PES_TELEFONE'
-              Title.Caption = 'Telefone'
-              Width = 64
+              Width = 90
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'PES_WHATSAPP'
               Title.Caption = 'WhatsApp'
-              Width = 64
+              Width = 90
               Visible = True
             end>
         end
       end
       inherited crdCadastro: TCard
+        Width = 1018
+        ExplicitWidth = 1018
         object Label1: TLabel [0]
           Left = 73
           Top = 88
@@ -176,7 +190,9 @@ inherited ViewClientes: TViewClientes
           FocusControl = fldPesCpfCnpj
         end
         inherited pnlCadastro: TPanel
+          Width = 1018
           TabOrder = 9
+          ExplicitWidth = 1018
           inherited lblTituloCadastro: TLabel
             Width = 190
             Caption = 'Cadastro de Clientes'
@@ -199,7 +215,7 @@ inherited ViewClientes: TViewClientes
         object fldPesNomeRazao: TDBEdit
           Left = 74
           Top = 165
-          Width = 860
+          Width = 650
           Height = 27
           Ctl3D = False
           DataField = 'PES_NOME_RAZAO'
@@ -210,7 +226,7 @@ inherited ViewClientes: TViewClientes
         object fldPesFantasia: TDBEdit
           Left = 74
           Top = 220
-          Width = 860
+          Width = 650
           Height = 27
           Ctl3D = False
           DataField = 'PES_FANTASIA'
@@ -267,7 +283,7 @@ inherited ViewClientes: TViewClientes
         object fldPesObs: TDBEdit
           Left = 74
           Top = 382
-          Width = 861
+          Width = 650
           Height = 27
           Ctl3D = False
           DataField = 'PES_OBSERVACAO'

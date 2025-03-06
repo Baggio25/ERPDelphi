@@ -2,25 +2,28 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2025/02/17 22:04:20.000.234,=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
-    <Transaction>2025/02/17 22:05:44.000.870,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\services\Service.conexao.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.dfm</Transaction>
-    <Transaction>2025/02/17 22:05:44.000.870,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\services\Service.conexao.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2025/02/17 22:05:44.000.870,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\services\Service.conexao.pas</Transaction>
+    <Transaction>2025/02/17 22:05:44.000.870,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\services\Service.conexao.dfm</Transaction>
     <Transaction>2025/02/17 22:41:54.000.675,=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
-    <Transaction>2025/02/17 22:42:08.000.931,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\services\Service.cadastro.pas</Transaction>
-    <Transaction>2025/02/17 22:42:08.000.931,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\services\Service.cadastro.dfm</Transaction>
+    <Transaction>2025/02/17 22:42:08.000.931,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\services\Service.cadastro.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2025/02/17 22:42:08.000.931,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\services\Service.cadastro.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.dfm</Transaction>
     <Transaction>2025/02/17 22:52:49.000.849,=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
-    <Transaction>2025/02/17 22:53:36.000.439,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\providers\Provider.constantes.pas</Transaction>
+    <Transaction>2025/02/17 22:53:36.000.439,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\providers\Provider.constantes.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
     <Transaction>2025/02/17 23:06:48.000.745,=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
     <Transaction>2025/02/17 23:06:57.000.712,=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
-    <Transaction>2025/02/17 23:07:33.000.872,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.dfm</Transaction>
-    <Transaction>2025/02/17 23:07:33.000.872,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.pas</Transaction>
+    <Transaction>2025/02/17 23:07:33.000.872,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.dfm</Transaction>
+    <Transaction>2025/02/17 23:07:33.000.872,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
     <Transaction>2025/02/17 23:19:21.000.826,=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
-    <Transaction>2025/02/17 23:19:58.000.988,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.lista.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.dfm</Transaction>
-    <Transaction>2025/02/17 23:19:58.000.988,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.lista.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
-    <Transaction>2025/02/17 23:20:10.000.291,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.listas.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.lista.dfm</Transaction>
-    <Transaction>2025/02/17 23:20:10.000.291,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.listas.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.lista.pas</Transaction>
+    <Transaction>2025/02/17 23:19:58.000.988,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.lista.pas</Transaction>
+    <Transaction>2025/02/17 23:19:58.000.988,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.lista.dfm</Transaction>
+    <Transaction>2025/02/17 23:20:10.000.291,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.lista.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.listas.dfm</Transaction>
+    <Transaction>2025/02/17 23:20:10.000.291,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.lista.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.base.listas.pas</Transaction>
     <Transaction>2025/02/22 21:22:34.000.833,=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
-    <Transaction>2025/02/22 21:23:16.000.615,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.clientes.dfm</Transaction>
-    <Transaction>2025/02/22 21:23:16.000.615,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.clientes.pas</Transaction>
+    <Transaction>2025/02/22 21:23:16.000.615,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.clientes.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2025/02/22 21:23:16.000.615,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.clientes.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.dfm</Transaction>
+    <Transaction>2025/02/26 21:59:46.000.288,=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas</Transaction>
+    <Transaction>2025/02/26 22:00:39.000.277,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.dfm=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.fornecedores.dfm</Transaction>
+    <Transaction>2025/02/26 22:00:39.000.277,C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\Unit1.pas=C:\Users\rodri\Documents\Estudo\ws-delphigov\ERPDelphi\src\views\View.fornecedores.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="src"/>
@@ -40,5 +43,7 @@
     <File Path="src\views\View.clientes.dfm"/>
     <File Path="src\views\View.principal.pas"/>
     <File Path="src\views\View.principal.dfm"/>
+    <File Path="src\views\View.fornecedores.pas"/>
+    <File Path="src\views\View.fornecedores.dfm"/>
   </ProjectSortOrder>
 </BorlandProject>

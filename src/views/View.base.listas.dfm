@@ -2,19 +2,19 @@ inherited ViewBaseListas: TViewBaseListas
   Cursor = crHandPoint
   Caption = 'ViewBaseListas'
   ClientHeight = 550
-  ClientWidth = 1024
+  ClientWidth = 800
   Color = clWhite
   Font.Height = -16
   Position = poMainFormCenter
   OnMouseDown = FormMouseDown
   OnShow = FormShow
-  ExplicitWidth = 1024
+  ExplicitWidth = 800
   ExplicitHeight = 550
   TextHeight = 21
   object pnlTopo: TPanel
     Left = 0
     Top = 0
-    Width = 1024
+    Width = 800
     Height = 35
     Align = alTop
     BevelOuter = bvNone
@@ -25,7 +25,7 @@ inherited ViewBaseListas: TViewBaseListas
       AlignWithMargins = True
       Left = 10
       Top = 3
-      Width = 955
+      Width = 731
       Height = 29
       Margins.Left = 10
       Align = alClient
@@ -40,7 +40,7 @@ inherited ViewBaseListas: TViewBaseListas
       ExplicitHeight = 25
     end
     object pnlFechar: TPanel
-      Left = 968
+      Left = 744
       Top = 0
       Width = 56
       Height = 35
@@ -88,7 +88,7 @@ inherited ViewBaseListas: TViewBaseListas
   object pnlRodape: TPanel
     Left = 0
     Top = 510
-    Width = 1024
+    Width = 800
     Height = 40
     Align = alBottom
     BevelOuter = bvNone
@@ -96,7 +96,7 @@ inherited ViewBaseListas: TViewBaseListas
     ParentBackground = False
     TabOrder = 1
     object btnNovo: TPanel
-      Left = 524
+      Left = 300
       Top = 0
       Width = 100
       Height = 40
@@ -113,9 +113,10 @@ inherited ViewBaseListas: TViewBaseListas
       ParentCtl3D = False
       ParentFont = False
       TabOrder = 0
+      OnClick = btnNovoClick
     end
     object btnEditar: TPanel
-      Left = 624
+      Left = 400
       Top = 0
       Width = 100
       Height = 40
@@ -132,9 +133,10 @@ inherited ViewBaseListas: TViewBaseListas
       ParentCtl3D = False
       ParentFont = False
       TabOrder = 1
+      OnClick = btnEditarClick
     end
     object btnCancelar: TPanel
-      Left = 724
+      Left = 500
       Top = 0
       Width = 100
       Height = 40
@@ -151,9 +153,10 @@ inherited ViewBaseListas: TViewBaseListas
       ParentCtl3D = False
       ParentFont = False
       TabOrder = 2
+      OnClick = btnCancelarClick
     end
     object btnSalvar: TPanel
-      Left = 824
+      Left = 600
       Top = 0
       Width = 100
       Height = 40
@@ -170,9 +173,10 @@ inherited ViewBaseListas: TViewBaseListas
       ParentCtl3D = False
       ParentFont = False
       TabOrder = 3
+      OnClick = btnSalvarClick
     end
     object btnExcluir: TPanel
-      Left = 924
+      Left = 700
       Top = 0
       Width = 100
       Height = 40
@@ -194,7 +198,7 @@ inherited ViewBaseListas: TViewBaseListas
   object pnlLinhaFundo: TPanel
     Left = 0
     Top = 35
-    Width = 1024
+    Width = 800
     Height = 475
     Align = alClient
     BevelOuter = bvNone
@@ -205,12 +209,12 @@ inherited ViewBaseListas: TViewBaseListas
       AlignWithMargins = True
       Left = 3
       Top = 0
-      Width = 1018
+      Width = 794
       Height = 475
       Margins.Top = 0
       Margins.Bottom = 0
       Align = alClient
-      ActiveCard = crdCadastro
+      ActiveCard = crdPesquisa
       BevelOuter = bvNone
       Caption = 'cpnLista'
       Color = clWhite
@@ -219,7 +223,7 @@ inherited ViewBaseListas: TViewBaseListas
       object crdPesquisa: TCard
         Left = 0
         Top = 0
-        Width = 1018
+        Width = 794
         Height = 475
         Caption = 'Pesquisa'
         CardIndex = 0
@@ -227,7 +231,7 @@ inherited ViewBaseListas: TViewBaseListas
         object pnlPesquisa: TPanel
           Left = 0
           Top = 0
-          Width = 1018
+          Width = 794
           Height = 100
           Align = alTop
           BevelOuter = bvNone
@@ -271,7 +275,7 @@ inherited ViewBaseListas: TViewBaseListas
           AlignWithMargins = True
           Left = 5
           Top = 105
-          Width = 1008
+          Width = 784
           Height = 365
           Margins.Left = 5
           Margins.Top = 5
@@ -289,15 +293,15 @@ inherited ViewBaseListas: TViewBaseListas
           TabOrder = 1
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -16
+          TitleFont.Height = -13
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
         end
       end
       object crdCadastro: TCard
         Left = 0
         Top = 0
-        Width = 1018
+        Width = 794
         Height = 475
         Caption = 'Cadastro'
         CardIndex = 1
@@ -305,7 +309,7 @@ inherited ViewBaseListas: TViewBaseListas
         object pnlCadastro: TPanel
           Left = 0
           Top = 0
-          Width = 1018
+          Width = 794
           Height = 65
           Align = alTop
           BevelOuter = bvNone

@@ -1,0 +1,14 @@
+unit Provider.constantes;
+
+interface
+
+uses
+
+var
+  iCOD_FILIAL      : Integer;
+  sRAZAO_FILIAL    : String;
+  sFANTASIA_FILIAL : String;
+
+implementation
+
+end.

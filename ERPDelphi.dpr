@@ -8,7 +8,8 @@ uses
   Provider.constantes in 'src\providers\Provider.constantes.pas',
   View.base in 'src\views\View.base.pas' {ViewBase},
   View.base.listas in 'src\views\View.base.listas.pas' {ViewBaseListas},
-  View.clientes in 'src\views\View.clientes.pas' {ViewClientes};
+  View.clientes in 'src\views\View.clientes.pas' {ViewClientes},
+  View.fornecedores in 'src\views\View.fornecedores.pas' {ViewFornecedores};
 
 {$R *.res}
 
