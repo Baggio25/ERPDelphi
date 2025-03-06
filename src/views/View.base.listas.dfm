@@ -193,6 +193,7 @@ inherited ViewBaseListas: TViewBaseListas
       ParentCtl3D = False
       ParentFont = False
       TabOrder = 4
+      OnClick = btnExcluirClick
     end
   end
   object pnlLinhaFundo: TPanel

@@ -40,6 +40,7 @@ type
     procedure btnEditarClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
   private
     { Private declarations }
     procedure SetaAbaCadastros;
@@ -55,28 +56,56 @@ implementation
 
 {$R *.dfm}
 
+uses Service.cadastro, Provider.constantes;
+
 
 procedure TViewBaseListas.btnCancelarClick(Sender: TObject);
 begin
   inherited;
+  if ServiceCadastro.FDQueryPessoas.State in dsEditModes then begin
+    ServiceCadastro.FDQueryPessoas.Cancel;
+  end;
   SetaAbaPesquisa;
 end;
 
 procedure TViewBaseListas.btnEditarClick(Sender: TObject);
 begin
   inherited;
+  ServiceCadastro.FDQueryPessoas.Edit;
   SetaAbaCadastros;
+end;
+
+procedure TViewBaseListas.btnExcluirClick(Sender: TObject);
+begin
+  inherited;
+
+  if ServiceCadastro.FDQueryPessoas.RecordCount > 0 then begin
+
+    if Application.MessageBox('Confirma Exclusão ?','Atenção !!!',
+                  MB_YESNO + MB_ICONQUESTION + MB_DEFBUTTON2) = IDYES then begin
+      ServiceCadastro.FDQueryPessoas.Delete;
+      ShowMessage('Registro excluído com sucesso.');
+    end;
+
+  end;
 end;
 
 procedure TViewBaseListas.btnNovoClick(Sender: TObject);
 begin
   inherited;
   SetaAbaCadastros;
+  ServiceCadastro.FDQueryPessoas.Insert;
 end;
 
 procedure TViewBaseListas.btnSalvarClick(Sender: TObject);
 begin
   inherited;
+
+  if ServiceCadastro.FDQueryPessoas.State in dsEditModes then begin
+    ServiceCadastro.FDQueryPessoasPES_TIPO.AsInteger := Self.tag;
+    ServiceCadastro.FDQueryPessoas.Post;
+  end;
+
   SetaAbaPesquisa;
 end;
 
@@ -94,6 +123,7 @@ procedure TViewBaseListas.FormShow(Sender: TObject);
 begin
   inherited;
   cpnLista.ActiveCard := crdPesquisa;
+  GetPessoas(Self.Tag);
 end;
 
 procedure TViewBaseListas.pnlFecharClick(Sender: TObject);
@@ -105,6 +135,7 @@ end;
 procedure TViewBaseListas.SetaAbaCadastros;
 begin
   cpnLista.ActiveCard := crdCadastro;
+  SelectFirst;
 end;
 
 procedure TViewBaseListas.SetaAbaPesquisa;

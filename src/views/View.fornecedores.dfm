@@ -39,7 +39,6 @@ inherited ViewFornecedores: TViewFornecedores
     end
     inherited btnExcluir: TPanel
       Left = 924
-      OnClick = btnExcluirClick
       ExplicitLeft = 924
     end
   end

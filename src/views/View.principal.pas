@@ -79,6 +79,7 @@ begin
   ViewClientes := TViewClientes.Create(Self);
 
   try
+    ViewClientes.Tag := 1;
     ViewClientes.ShowModal;
   finally
     FreeAndNil(ViewClientes);
@@ -95,6 +96,7 @@ begin
   ViewFornecedores := TViewFornecedores.Create(Self);
 
   try
+    ViewFornecedores.Tag := 2;
     ViewFornecedores.ShowModal;
   finally
     FreeAndNil(ViewFornecedores);
